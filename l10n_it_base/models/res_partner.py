@@ -91,7 +91,8 @@ class ResPartner(models.Model):
     def onchange_vat(self):
         res = {}
         if self.vat:
-            ids = self.search([('vat', '=', self.vat)])
+            ids = self.search([('vat', '=', self.vat),
+                               ('parent_id', '!=', False)])
             if ids:
                 name = self.browse(ids[0].id).name
                 res['warning'] = {

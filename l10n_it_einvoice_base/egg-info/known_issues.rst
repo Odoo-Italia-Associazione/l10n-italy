@@ -1,11 +1,11 @@
-|en| Please, do not mix the following OCA Italy and OIA module.
+|en| Please, do not mix the following module with OCA Italy modules.
 
 This module may be conflict with some OCA modules with error:
 
 |exclamation| name CryptoBinary used for multiple values in typeBinding
 
 
-|it| Si consiglia di non mescolare moduli OCA Italia e moduli OIA.
+|it| Si consiglia di non mescolare i seguenti moduli con i moduli di OCA Italia.
 
 Lo schema di definizione xml, pubblicato con
 urn:www.agenziaentrate.gov.it:specificheTecniche è base per tutti i file

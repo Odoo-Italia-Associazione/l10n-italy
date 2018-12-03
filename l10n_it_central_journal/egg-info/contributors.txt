@@ -1,13 +1,13 @@
 .. $if branch in '7.0'
-Daniele Arcangeli <d.arcangeli@isa.it>
-Alessandro Camilli <a.camilli@yahoo.it>
+* Daniele Arcangeli <d.arcangeli@isa.it>
+* Alessandro Camilli <a.camilli@yahoo.it>
 .. $elif branch in '8.0'
 * Diego Milani <dmilani@linkgroup.it>
 * Davide Corio <davide.corio@abstract.it>
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 .. $elif branch in '9.0'
-Daniele Arcangeli <d.arcangeli@isa.it>
-Alessandro Camilli <a.camilli@yahoo.it>
+* Daniele Arcangeli <d.arcangeli@isa.it>
+* Alessandro Camilli <a.camilli@yahoo.it>
 .. $elif branch in '10.0'
 * Gianmarco Conte <gconte@dinamicheaziendali.it>
 * Lara Baggio <lbaggio@linkgroup.it>

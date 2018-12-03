@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="account.account" id="cee_0">
+        <field name="code">EU_0</field>
+        <field name="name">EU</field>
+        <field name="parent_id:id"></field>
+        <field name="user_type:id">account.data_account_type_view</field>
+        <field name="type">view</field>
+        <field name="reconcile">False</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP">
+        <field name="code">LP</field>
+        <field name="name">LOST &amp; PROFIT</field>
+        <field name="parent_id:id">cee_0</field>
+        <field name="user_type:id">account_type_legalview1</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A">
+        <field name="code">LP_A</field>
+        <field name="name">VALORE DELLA PRODUZIONE</field>
+        <field name="parent_id:id">cee_E</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A1">
+        <field name="code">LP_A1</field>
+        <field name="name">Ricavi delle vendite e delle prestazioni</field>
+        <field name="parent_id:id">cee_LP_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A2">
+        <field name="code">LP_A2</field>
+        <field name="name">Variazione rimanenze prodotti in corso di lavor., semilavorati e finiti</field>
+        <field name="parent_id:id">cee_LP_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A3">
+        <field name="code">LP_A3</field>
+        <field name="name">Variazione dei lavori in corso su ordinazione</field>
+        <field name="parent_id:id">cee_LP_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A4">
+        <field name="code">LP_A4</field>
+        <field name="name">Incrementi di immobilizzazioni per lavori interni</field>
+        <field name="parent_id:id">cee_LP_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A5">
+        <field name="code">LP_A5</field>
+        <field name="name">Altri ricavi e proventi</field>
+        <field name="parent_id:id">cee_LP_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A51">
+        <field name="code">LP_A51</field>
+        <field name="name">Vari</field>
+        <field name="parent_id:id">cee_LP_A5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_A52">
+        <field name="code">LP_A52</field>
+        <field name="name">Contributi in conto esercizio</field>
+        <field name="parent_id:id">cee_LP_A5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B">
+        <field name="code">LP_B</field>
+        <field name="name">COSTI DELLA PRODUZIONE</field>
+        <field name="parent_id:id">cee_E</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B10">
+        <field name="code">LP_B10</field>
+        <field name="name">Ammortamenti e svalutazioni</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B10a">
+        <field name="code">LP_B10a</field>
+        <field name="name">Ammortamento delle immobilizzazioni immateriali</field>
+        <field name="parent_id:id">cee_LP_B10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B10b">
+        <field name="code">LP_B10b</field>
+        <field name="name">Ammortamento delle immobilizzazioni materiali</field>
+        <field name="parent_id:id">cee_LP_B10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B10c">
+        <field name="code">LP_B10c</field>
+        <field name="name">Altre svalutazioni delle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_B10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B10d">
+        <field name="code">LP_B10d</field>
+        <field name="name">svalutazioni dei crediti compresi nell'attivo circolante e delle disponibilita' liquide</field>
+        <field name="parent_id:id">cee_LP_B10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B11">
+        <field name="code">LP_B11</field>
+        <field name="name">variazioni delle rimanenze di materie prime, sussidiarie, di consumo e merci</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B12">
+        <field name="code">LP_B12</field>
+        <field name="name">Accantonamenti per rischi</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B13">
+        <field name="code">LP_B13</field>
+        <field name="name">Altri accantonamenti</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B14">
+        <field name="code">LP_B14</field>
+        <field name="name">Oneri diversi di gestione</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B6">
+        <field name="code">LP_B6</field>
+        <field name="name">Acquisti materie prime, sussidiarie, di consumo e di merci</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B7">
+        <field name="code">LP_B7</field>
+        <field name="name">Spese per prestazioni di servizi</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B8">
+        <field name="code">LP_B8</field>
+        <field name="name">Spese per godimento di beni di terzi</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9">
+        <field name="code">LP_B9</field>
+        <field name="name">Costi del personale</field>
+        <field name="parent_id:id">cee_LP_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9a">
+        <field name="code">LP_B9a</field>
+        <field name="name">Salari, stipendi</field>
+        <field name="parent_id:id">cee_LP_B9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9b">
+        <field name="code">LP_B9b</field>
+        <field name="name">Oneri sociali</field>
+        <field name="parent_id:id">cee_LP_B9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9c">
+        <field name="code">LP_B9c</field>
+        <field name="name">Accantonamento al T.F.R.</field>
+        <field name="parent_id:id">cee_LP_B9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9d">
+        <field name="code">LP_B9d</field>
+        <field name="name">Accantonamento per Trattamento di quiescenza e simili</field>
+        <field name="parent_id:id">cee_LP_B9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_B9e">
+        <field name="code">LP_B9e</field>
+        <field name="name">Altri costi del personale</field>
+        <field name="parent_id:id">cee_LP_B9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C">
+        <field name="code">LP_C</field>
+        <field name="name">PROVENTI ED ONERI FINANZIARI</field>
+        <field name="parent_id:id">cee_E</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C15">
+        <field name="code">LP_C15</field>
+        <field name="name">Proventi da partecipazioni</field>
+        <field name="parent_id:id">cee_LP_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C15a">
+        <field name="code">LP_C15a</field>
+        <field name="name">Proventi da partecipazioni in imprese controllate</field>
+        <field name="parent_id:id">cee_LP_C15</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C15b">
+        <field name="code">LP_C15b</field>
+        <field name="name">Proventi da partecipazioni in imprese collegate</field>
+        <field name="parent_id:id">cee_LP_C15</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C15c">
+        <field name="code">LP_C15c</field>
+        <field name="name">Proventi da partecipazioni in altre imprese</field>
+        <field name="parent_id:id">cee_LP_C15</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16">
+        <field name="code">LP_C16</field>
+        <field name="name">Altri proventi finanziari</field>
+        <field name="parent_id:id">cee_LP_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16a">
+        <field name="code">LP_C16a</field>
+        <field name="name">Da crediti iscritti nelle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_C16</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16a1">
+        <field name="code">LP_C16a1</field>
+        <field name="name">Proventi da crediti verso controllate iscritti nelle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_C16a</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16a2">
+        <field name="code">LP_C16a2</field>
+        <field name="name">Proventi da crediti verso collgate iscritti nelle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_C16a</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16a3">
+        <field name="code">LP_C16a3</field>
+        <field name="name">Proventi da crediti verso controllanti iscritti nelle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_C16a</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16b">
+        <field name="code">LP_C16b</field>
+        <field name="name">Proventi da titoli iscritti nelle immobilizzazioni</field>
+        <field name="parent_id:id">cee_LP_C16</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16c">
+        <field name="code">LP_C16c</field>
+        <field name="name">Proventi da titoli iscritti nell'attivo circolante</field>
+        <field name="parent_id:id">cee_LP_C16</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16d">
+        <field name="code">LP_C16d</field>
+        <field name="name">Proventi diversi dai precedenti</field>
+        <field name="parent_id:id">cee_LP_C16</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16d1">
+        <field name="code">LP_C16d1</field>
+        <field name="name">Da imprese Controllate</field>
+        <field name="parent_id:id">cee_LP_C16d</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16d2">
+        <field name="code">LP_C16d2</field>
+        <field name="name">Da imprese Controllanti</field>
+        <field name="parent_id:id">cee_LP_C16d</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C16d4">
+        <field name="code">LP_C16d4</field>
+        <field name="name">Altri proventi finanziari</field>
+        <field name="parent_id:id">cee_LP_C16d</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C17">
+        <field name="code">LP_C17</field>
+        <field name="name">Interessi e altri oneri finanziari</field>
+        <field name="parent_id:id">cee_LP_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C17a">
+        <field name="code">LP_C17a</field>
+        <field name="name">Interessi e altri oneri finanziari verso controllate</field>
+        <field name="parent_id:id">cee_LP_C17</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C17b">
+        <field name="code">LP_C17b</field>
+        <field name="name">Interessi e altri oneri finanziari verso collegate</field>
+        <field name="parent_id:id">cee_LP_C17</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C17-bis">
+        <field name="code">LP_C17-bis</field>
+        <field name="name">Utili e perdite su cambi</field>
+        <field name="parent_id:id">cee_LP_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_C17c">
+        <field name="code">LP_C17c</field>
+        <field name="name">Interessi e altri oneri finanziari verso controllanti</field>
+        <field name="parent_id:id">cee_LP_C17</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D">
+        <field name="code">LP_D</field>
+        <field name="name">RETTIFICHE DI VALORE DI ATTIVITA' FINANZIARIE</field>
+        <field name="parent_id:id">cee_E</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D18">
+        <field name="code">LP_D18</field>
+        <field name="name">Rivalutazioni</field>
+        <field name="parent_id:id">cee_LP_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D18a">
+        <field name="code">LP_D18a</field>
+        <field name="name">Rivalutazione di partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D18</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D18b">
+        <field name="code">LP_D18b</field>
+        <field name="name">Rivalutazione di immobilizzazioni finanziarie che non costituiscono partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D18</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D18c">
+        <field name="code">LP_D18c</field>
+        <field name="name">Rivalutazione di titoli iscritti all'attivo circolante che non costituiscono partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D18</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D19">
+        <field name="code">LP_D19</field>
+        <field name="name">Svalutazioni</field>
+        <field name="parent_id:id">cee_LP_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D19a">
+        <field name="code">LP_D19a</field>
+        <field name="name">Svalutazioni di partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D19</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D19b">
+        <field name="code">LP_D19b</field>
+        <field name="name">Svalutazioni di immobilizzazioni finanziarie che non costituiscono partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D19</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_D19c">
+        <field name="code">LP_D19c</field>
+        <field name="name">Svalutazioni di titoli iscritti nell'attivo circolante che non costituiscono partecipazioni</field>
+        <field name="parent_id:id">cee_LP_D19</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E">
+        <field name="code">LP_E</field>
+        <field name="name">Proventi e oneri straordinari</field>
+        <field name="parent_id:id">cee_E</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E20">
+        <field name="code">LP_E20</field>
+        <field name="name">Proventi</field>
+        <field name="parent_id:id">cee_LP_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E20a">
+        <field name="code">LP_E20a</field>
+        <field name="name">proventi derivanti da plusvalenze da alienazioni</field>
+        <field name="parent_id:id">cee_LP_E20</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E21">
+        <field name="code">LP_E21</field>
+        <field name="name">Oneri</field>
+        <field name="parent_id:id">cee_LP_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E22">
+        <field name="code">LP_E22</field>
+        <field name="name">imposte sul reddito dell'esercizio, correnti, differite e anticipate</field>
+        <field name="parent_id:id">cee_LP_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E22a">
+        <field name="code">LP_E22a</field>
+        <field name="name">Oneri derivanti da minusvalenze da alienazioni</field>
+        <field name="parent_id:id">cee_LP_E21</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E22b">
+        <field name="code">LP_E22b</field>
+        <field name="name">Oneri derivanti da imposte relative a esercizi precedenti</field>
+        <field name="parent_id:id">cee_LP_E21</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LP_E23">
+        <field name="code">LP_E23</field>
+        <field name="name">utile dell'esercizio</field>
+        <field name="parent_id:id">cee_LP_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_BS">
+        <field name="code">BS</field>
+        <field name="name">BALANCE SHEET</field>
+        <field name="parent_id:id">cee_0</field>
+        <field name="user_type:id">account_type_legalview1</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS">
+        <field name="code">AS</field>
+        <field name="name">ASSET</field>
+        <field name="parent_id:id">cee_P</field>
+        <field name="user_type:id">account_type_legalview1</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_A">
+        <field name="code">AS_A</field>
+        <field name="name">CREDITI VERSO SOCI PER VERSAMENTI ANCORA DOVUTI</field>
+        <field name="parent_id:id">cee_AS</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_A1">
+        <field name="code">AS_A1</field>
+        <field name="name">Crediti verso soci gia' richiamati</field>
+        <field name="parent_id:id">cee_AS_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_A2">
+        <field name="code">AS_A2</field>
+        <field name="name">Crediti verso soci non ancora richiamati</field>
+        <field name="parent_id:id">cee_AS_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_B">
+        <field name="code">AS_B</field>
+        <field name="name">IMMOBILIZZAZIONI</field>
+        <field name="parent_id:id">cee_AS</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI">
+        <field name="code">AS_BI</field>
+        <field name="name">IMMOBILIZZAZIONI IMMATERIALI</field>
+        <field name="parent_id:id">cee_AS_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI1">
+        <field name="code">AS_BI1</field>
+        <field name="name">Costi di impianto e ampliamento</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI2">
+        <field name="code">AS_BI2</field>
+        <field name="name">Costi di ricerca, sviluppo, pubblicita'</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI3">
+        <field name="code">AS_BI3</field>
+        <field name="name">Diritti di brevetto industriale e di utilizzo di opere dell'ingegno</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI4">
+        <field name="code">AS_BI4</field>
+        <field name="name">Concessioni, licenze, marchi e diritti simili</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI5">
+        <field name="code">AS_BI5</field>
+        <field name="name">Avviamento</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI6">
+        <field name="code">AS_BI6</field>
+        <field name="name">Immobilizzazioni immateriali in corso e acconti</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BI7">
+        <field name="code">AS_BI7</field>
+        <field name="name">Altre immobilizzazioni immateriali</field>
+        <field name="parent_id:id">cee_AS_BI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII">
+        <field name="code">AS_BII</field>
+        <field name="name">IMMOBILIZZAZIONI MATERIALI</field>
+        <field name="parent_id:id">cee_AS_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII1">
+        <field name="code">AS_BII1</field>
+        <field name="name">Terreni e fabbricati</field>
+        <field name="parent_id:id">cee_AS_BII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII2">
+        <field name="code">AS_BII2</field>
+        <field name="name">Impianti e macchinario</field>
+        <field name="parent_id:id">cee_AS_BII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII3">
+        <field name="code">AS_BII3</field>
+        <field name="name">Attrezzature industriali e commerciali</field>
+        <field name="parent_id:id">cee_AS_BII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII4">
+        <field name="code">AS_BII4</field>
+        <field name="name">Altri beni materiali</field>
+        <field name="parent_id:id">cee_AS_BII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BII5">
+        <field name="code">AS_BII5</field>
+        <field name="name">immobilizzazioni in corso e acconti</field>
+        <field name="parent_id:id">cee_AS_BII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII">
+        <field name="code">AS_BIII</field>
+        <field name="name">IMMOBILIZZAZIONI FINANZIARIE</field>
+        <field name="parent_id:id">cee_AS_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII1">
+        <field name="code">AS_BIII1</field>
+        <field name="name">Partecipazioni</field>
+        <field name="parent_id:id">cee_AS_BIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII1a">
+        <field name="code">AS_BIII1a</field>
+        <field name="name">Partecipazioni in imprese controllate</field>
+        <field name="parent_id:id">cee_AS_BIII1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII1b">
+        <field name="code">AS_BIII1b</field>
+        <field name="name">Partecipazioni in imprese collegate</field>
+        <field name="parent_id:id">cee_AS_BIII1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII1c">
+        <field name="code">AS_BIII1c</field>
+        <field name="name">Partecipazioni in imprese controllanti</field>
+        <field name="parent_id:id">cee_AS_BIII1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII1d">
+        <field name="code">AS_BIII1d</field>
+        <field name="name">Partecipazioni in altre imprese</field>
+        <field name="parent_id:id">cee_AS_BIII1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2">
+        <field name="code">AS_BIII2</field>
+        <field name="name">Crediti</field>
+        <field name="parent_id:id">cee_AS_BIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2a">
+        <field name="code">AS_BIII2a</field>
+        <field name="name">Crediti verso imprese controllate</field>
+        <field name="parent_id:id">cee_AS_BIII2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2a1">
+        <field name="code">AS_BIII2a1</field>
+        <field name="name">Crediti verso imprese controllate esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_BIII2a</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2b">
+        <field name="code">AS_BIII2b</field>
+        <field name="name">Crediti verso imprese collegate</field>
+        <field name="parent_id:id">cee_AS_BIII2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2b1">
+        <field name="code">AS_BIII2b1</field>
+        <field name="name">Crediti verso imprese collegate esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_BIII2b</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2c">
+        <field name="code">AS_BIII2c</field>
+        <field name="name">Crediti verso imprese controllanti</field>
+        <field name="parent_id:id">cee_AS_BIII2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2c1">
+        <field name="code">AS_BIII2c1</field>
+        <field name="name">Crediti verso imprese controllanti esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_BIII2c</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2d">
+        <field name="code">AS_BIII2d</field>
+        <field name="name">Crediti verso altri</field>
+        <field name="parent_id:id">cee_AS_BIII2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII2d1">
+        <field name="code">AS_BIII2d1</field>
+        <field name="name">Crediti verso altri esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_BIII2d</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII3">
+        <field name="code">AS_BIII3</field>
+        <field name="name">Altri titoli</field>
+        <field name="parent_id:id">cee_AS_BIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII4">
+        <field name="code">AS_BIII4</field>
+        <field name="name">Azioni proprie immobilizzate</field>
+        <field name="parent_id:id">cee_AS_BIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_BIII4a">
+        <field name="code">AS_BIII4a</field>
+        <field name="name">valore nominale complessivo</field>
+        <field name="parent_id:id">cee_AS_BIII4</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_C">
+        <field name="code">AS_C</field>
+        <field name="name">ATTIVO CIRCOLANTE</field>
+        <field name="parent_id:id">cee_AS</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI">
+        <field name="code">AS_CI</field>
+        <field name="name">RIMANENZE</field>
+        <field name="parent_id:id">cee_AS_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI1">
+        <field name="code">AS_CI1</field>
+        <field name="name">Materie prime, sussidiarie e di consumo</field>
+        <field name="parent_id:id">cee_AS_CI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI2">
+        <field name="code">AS_CI2</field>
+        <field name="name">Prodotti in corso di lavorazione e semilavorati</field>
+        <field name="parent_id:id">cee_AS_CI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI3">
+        <field name="code">AS_CI3</field>
+        <field name="name">Lavori in corso su ordinazione</field>
+        <field name="parent_id:id">cee_AS_CI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI4">
+        <field name="code">AS_CI4</field>
+        <field name="name">Prodotti finiti e merci</field>
+        <field name="parent_id:id">cee_AS_CI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CI5">
+        <field name="code">AS_CI5</field>
+        <field name="name">Anticipi a fornitori</field>
+        <field name="parent_id:id">cee_AS_CI</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII">
+        <field name="code">AS_CII</field>
+        <field name="name">CREDITI</field>
+        <field name="parent_id:id">cee_AS_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII1">
+        <field name="code">AS_CII1</field>
+        <field name="name">Crediti verso clienti</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII1a">
+        <field name="code">AS_CII1a</field>
+        <field name="name">Crediti verso clienti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII2">
+        <field name="code">AS_CII2</field>
+        <field name="name">Crediti verso controllate</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII2a">
+        <field name="code">AS_CII2a</field>
+        <field name="name">Crediti verso controllate esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII3">
+        <field name="code">AS_CII3</field>
+        <field name="name">Crediti verso collegate</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII3a">
+        <field name="code">AS_CII3a</field>
+        <field name="name">Crediti verso collegate esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII3</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII4">
+        <field name="code">AS_CII4</field>
+        <field name="name">Crediti verso controllanti</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII4a">
+        <field name="code">AS_CII4a</field>
+        <field name="name">Crediti verso controllanti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII4</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII5">
+        <field name="code">AS_CII5</field>
+        <field name="name">Crediti verso altri</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII5a">
+        <field name="code">AS_CII5a</field>
+        <field name="name">Crediti verso altri esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII4bis">
+        <field name="code">AS_CII4bis</field>
+        <field name="name">Crediti Tributari</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CII4bisA">
+        <field name="code">AS_CII4bisA</field>
+        <field name="name">Crediti Tributari esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CII4bis</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII">
+        <field name="code">AS_CIII</field>
+        <field name="name">ATTIVITA' FINANZIARIE CHE NON COSTITUISCONO IMMOBILIZZAZIONI</field>
+        <field name="parent_id:id">cee_AS_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII1">
+        <field name="code">AS_CIII1</field>
+        <field name="name">Partecipazioni in imprese controllate</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII2">
+        <field name="code">AS_CIII2</field>
+        <field name="name">Partecipazioni in imprese collegate</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII3">
+        <field name="code">AS_CIII3</field>
+        <field name="name">Partecipazioni in imprese controllanti</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII4">
+        <field name="code">AS_CIII4</field>
+        <field name="name">Altre partecipazioni</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII5">
+        <field name="code">AS_CIII5</field>
+        <field name="name">Azioni proprie per investimento temporaneo</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII5a">
+        <field name="code">AS_CIII5a</field>
+        <field name="name">valore nominale complessivo</field>
+        <field name="parent_id:id">cee_AS_CIII5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIII6">
+        <field name="code">AS_CIII6</field>
+        <field name="name">Altri titoli</field>
+        <field name="parent_id:id">cee_AS_CIII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIIT">
+        <field name="code">AS_CIIT</field>
+        <field name="name">Imposte Anticipate</field>
+        <field name="parent_id:id">cee_AS_CII</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIITa">
+        <field name="code">AS_CIITa</field>
+        <field name="name">Imposte Anticipate esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_AS_CIIT</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIV">
+        <field name="code">AS_CIV</field>
+        <field name="name">DISPONIBILITA' LIQUIDE</field>
+        <field name="parent_id:id">cee_AS_C</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIV1">
+        <field name="code">AS_CIV1</field>
+        <field name="name">Depositi bancari e postali</field>
+        <field name="parent_id:id">cee_AS_CIV</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIV2">
+        <field name="code">AS_CIV2</field>
+        <field name="name">Assegni</field>
+        <field name="parent_id:id">cee_AS_CIV</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_CIV3">
+        <field name="code">AS_CIV3</field>
+        <field name="name">Denaro e valori in cassa</field>
+        <field name="parent_id:id">cee_AS_CIV</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_D">
+        <field name="code">AS_D</field>
+        <field name="name">RATEI E RISCONTI ATTIVI</field>
+        <field name="parent_id:id">cee_AS</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_D1">
+        <field name="code">AS_D1</field>
+        <field name="name">Disaggi sui prestiti</field>
+        <field name="parent_id:id">cee_AS_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_AS_D2">
+        <field name="code">AS_D2</field>
+        <field name="name">Vari</field>
+        <field name="parent_id:id">cee_AS_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA">
+        <field name="code">MA</field>
+        <field name="name">MEMORANDUM ACCOUNTS</field>
+        <field name="parent_id:id">cee_P</field>
+        <field name="user_type:id">account_type_legalview1</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_A">
+        <field name="code">MA_A</field>
+        <field name="name">Fidejussioni prestate</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_B">
+        <field name="code">MA_B</field>
+        <field name="name">Avalli prestati</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_C">
+        <field name="code">MA_C</field>
+        <field name="name">Altre garanzie prestate</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_D">
+        <field name="code">MA_D</field>
+        <field name="name">Garanzie ricevute</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_E">
+        <field name="code">MA_E</field>
+        <field name="name">Nostri impegni</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_F">
+        <field name="code">MA_F</field>
+        <field name="name">Nostri rischi</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_G">
+        <field name="code">MA_G</field>
+        <field name="name">Beni di terzi presso di noi</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_H">
+        <field name="code">MA_H</field>
+        <field name="name">Nostri beni presso terzi</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_MA_I">
+        <field name="code">MA_I</field>
+        <field name="name">Beni in leasing riscattati</field>
+        <field name="parent_id:id">cee_MA</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI">
+        <field name="code">LI</field>
+        <field name="name">LIABILITY</field>
+        <field name="parent_id:id">cee_P</field>
+        <field name="user_type:id">account_type_legalview1</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_A">
+        <field name="code">LI_A</field>
+        <field name="name">PATRIMONIO NETTO</field>
+        <field name="parent_id:id">cee_LI</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AI">
+        <field name="code">LI_AI</field>
+        <field name="name">Capitale</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AII">
+        <field name="code">LI_AII</field>
+        <field name="name">Riserva da sovrapprezzo azioni</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AIII">
+        <field name="code">LI_AIII</field>
+        <field name="name">Riserve di rivalutazione</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AIV">
+        <field name="code">LI_AIV</field>
+        <field name="name">Riserva legale</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AIX">
+        <field name="code">LI_AIX</field>
+        <field name="name">utili (perdite) dell'esercizio</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AV">
+        <field name="code">LI_AV</field>
+        <field name="name">Riserve statutarie</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AVI">
+        <field name="code">LI_AVI</field>
+        <field name="name">Riserva per azioni proprie in portafoglio</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AVII">
+        <field name="code">LI_AVII</field>
+        <field name="name">altre riserve</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_AVIII">
+        <field name="code">LI_AVIII</field>
+        <field name="name">utili (perdite) portati a nuovo</field>
+        <field name="parent_id:id">cee_LI_A</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_B">
+        <field name="code">LI_B</field>
+        <field name="name">FONDI PER RISCHI ED ONERI</field>
+        <field name="parent_id:id">cee_LI</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_B1">
+        <field name="code">LI_B1</field>
+        <field name="name">Fondo per trattamento di quiescenza o simili</field>
+        <field name="parent_id:id">cee_LI_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_B2">
+        <field name="code">LI_B2</field>
+        <field name="name">Fondo per imposte, anche differite</field>
+        <field name="parent_id:id">cee_LI_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_B3">
+        <field name="code">LI_B3</field>
+        <field name="name">Altri fondi oneri e rischi futuri</field>
+        <field name="parent_id:id">cee_LI_B</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_C">
+        <field name="code">LI_C</field>
+        <field name="name">TRATTAMENTO DI FINE RAPPORTO DI LAVORO SUBORDINATO</field>
+        <field name="parent_id:id">cee_LI</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D">
+        <field name="code">LI_D</field>
+        <field name="name">DEBITI</field>
+        <field name="parent_id:id">cee_LI</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">view</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D1">
+        <field name="code">LI_D1</field>
+        <field name="name">Obbligazioni</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D10">
+        <field name="code">LI_D10</field>
+        <field name="name">Debiti verso collegate</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D10a">
+        <field name="code">LI_D10a</field>
+        <field name="name">Debiti verso collegate esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D10b">
+        <field name="code">LI_D10b</field>
+        <field name="name">Debiti verso collegate esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D10</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D11">
+        <field name="code">LI_D11</field>
+        <field name="name">Debiti verso controllanti</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D11a">
+        <field name="code">LI_D11a</field>
+        <field name="name">Debiti verso controllanti esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D11</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D11b">
+        <field name="code">LI_D11b</field>
+        <field name="name">Debiti verso controllanti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D11</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D12">
+        <field name="code">LI_D12</field>
+        <field name="name">Debiti tributari</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D12a">
+        <field name="code">LI_D12a</field>
+        <field name="name">Debiti tributari esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D12</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D12b">
+        <field name="code">LI_D12b</field>
+        <field name="name">Debiti tributari esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D12</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D13">
+        <field name="code">LI_D13</field>
+        <field name="name">Debiti verso istituti di previdenza e sicurezza sociale</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D13a">
+        <field name="code">LI_D13a</field>
+        <field name="name">Debiti verso istituti di previdenza e sicurezza sociale esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D13</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D13b">
+        <field name="code">LI_D13b</field>
+        <field name="name">Debiti verso istituti di previdenza e sicurezza sociale esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D13</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D14">
+        <field name="code">LI_D14</field>
+        <field name="name">Altri debiti</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D14a">
+        <field name="code">LI_D14a</field>
+        <field name="name">Altri debiti esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D14</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D14b">
+        <field name="code">LI_D14b</field>
+        <field name="name">Altri debiti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D14</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D1a">
+        <field name="code">LI_D1a</field>
+        <field name="name">Obbligazioni esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D1b">
+        <field name="code">LI_D1b</field>
+        <field name="name">Obbligazioni esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D1</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D2">
+        <field name="code">LI_D2</field>
+        <field name="name">Obbligazioni convertibili</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D2a">
+        <field name="code">LI_D2a</field>
+        <field name="name">Obbligazioni convertibili esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D2b">
+        <field name="code">LI_D2b</field>
+        <field name="name">Obbligazioni convertibili esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D2</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D3">
+        <field name="code">LI_D3</field>
+        <field name="name">Debiti verso Soci per finanziamenti</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D3a">
+        <field name="code">LI_D3a</field>
+        <field name="name">Debiti verso Soci per finanziamenti esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D3</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D3b">
+        <field name="code">LI_D3b</field>
+        <field name="name">Debiti verso Soci per finanziamenti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D3</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D4">
+        <field name="code">LI_D4</field>
+        <field name="name">Debiti verso banche</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D4a">
+        <field name="code">LI_D4a</field>
+        <field name="name">Debiti verso banche esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D4</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D4b">
+        <field name="code">LI_D4b</field>
+        <field name="name">Debiti verso banche esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D4</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D5">
+        <field name="code">LI_D5</field>
+        <field name="name">Debiti verso altri finanziatori</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D5a">
+        <field name="code">LI_D5a</field>
+        <field name="name">Debiti verso altri finanziatori esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D5b">
+        <field name="code">LI_D5b</field>
+        <field name="name">Debiti verso altri finanziatori esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D5</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D6">
+        <field name="code">LI_D6</field>
+        <field name="name">Acconti</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D6a">
+        <field name="code">LI_D6a</field>
+        <field name="name">Acconti esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D6</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D6b">
+        <field name="code">LI_D6b</field>
+        <field name="name">Acconti esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D6</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D7">
+        <field name="code">LI_D7</field>
+        <field name="name">Debiti verso fornitori</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D7a">
+        <field name="code">LI_D7a</field>
+        <field name="name">Debiti verso fornitori esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D7</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D7b">
+        <field name="code">LI_D7b</field>
+        <field name="name">Debiti verso fornitori esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D7</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D8">
+        <field name="code">LI_D8</field>
+        <field name="name">Debiti rappresentati da titoli di credito</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D8a">
+        <field name="code">LI_D8a</field>
+        <field name="name">Debiti rappresentati da titoli di credito esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D8</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D8b">
+        <field name="code">LI_D8b</field>
+        <field name="name">Debiti rappresentati da titoli di credito esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D8</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D9">
+        <field name="code">LI_D9</field>
+        <field name="name">Debiti verso controllate</field>
+        <field name="parent_id:id">cee_LI_D</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D9a">
+        <field name="code">LI_D9a</field>
+        <field name="name">Debiti verso controllate esigibili entro l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_D9b">
+        <field name="code">LI_D9b</field>
+        <field name="name">Debiti verso controllate esigibili oltre l'esercizio successivo</field>
+        <field name="parent_id:id">cee_LI_D9</field>
+        <field name="user_type:id">account_type_legalview4</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_E">
+        <field name="code">LI_E</field>
+        <field name="name">RATEI E RISCONTI PASSIVI</field>
+        <field name="parent_id:id">cee_LI</field>
+        <field name="user_type:id">account_type_legalview2</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_Ea">
+        <field name="code">LI_Ea</field>
+        <field name="name">Aggi su prestiti</field>
+        <field name="parent_id:id">cee_LI_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+    <record model="account.account" id="cee_LI_Eb">
+        <field name="code">LI_Eb</field>
+        <field name="name">Vari</field>
+        <field name="parent_id:id">cee_LI_E</field>
+        <field name="user_type:id">account_type_legalview3</field>
+        <field name="type">consolidation</field>
+        <field name="reconcile">True</field>
+        <field name="child_consol_ids:id"></field>
+    </record>
+</odoo>

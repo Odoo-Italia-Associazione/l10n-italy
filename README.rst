@@ -81,23 +81,25 @@ Avaiable Addons / Moduli disponibili
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_corrispettivi_sale           | |no_check| | 10.0.1.0.1 | Modulo per integrare i corrispettivi in odoo con g |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_ddt                          | 10.0.1.5.1 | 10.0.1.7.0 | Documento di Trasporto                             |
+| l10n_it_ddt                          | 10.0.1.5.1 | 10.0.1.7.1 | Documento di Trasporto                             |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_einvoice_base                | 10.0.2.0.1 | |no_check| | Infrastructure for Italian Electronic Invoice + Fa |
+| l10n_it_einvoice_base                | 10.0.2.1.1 | |no_check| | Infrastructure for Italian Electronic Invoice + Fa |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_einvoice_out                 | 10.0.1.0.0 | |no_check| | Electronic invoices emission                       |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_esigibilita_iva              | 10.0.1.0.0 | |same|     | Esigibilità IVA                                    |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa                    | |no_check| | 10.0.2.1.0 | Electronic invoices                                |
+| l10n_it_fatturapa                    | |no_check| | 10.0.2.2.2 | Electronic invoices                                |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_in                 | |no_check| | 10.0.1.1.0 | Electronic invoices reception                      |
+| l10n_it_fatturapa_in                 | |no_check| | 10.0.1.2.1 | Electronic invoices reception                      |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_fatturapa_in_purchase        | |no_check| | 10.0.1.0.0 | Fattura Elettronica - Purchase integration         |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_out                | |no_check| | 10.0.1.1.0 | Electronic invoices emission                       |
+| l10n_it_fatturapa_out                | |no_check| | 10.0.1.2.3 | Electronic invoices emission                       |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_out_ddt            | |no_check| | 10.0.1.0.0 | Bridge module                                      |
+| l10n_it_fatturapa_out_ddt            | |no_check| | 10.0.1.0.2 | Bridge module                                      |
++--------------------------------------+------------+------------+----------------------------------------------------+
+| l10n_it_fatturapa_pec                | |no_check| | 10.0.1.2.0 | Send electronic invoices via PEC                   |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_fiscal                       | 10.0.0.2.0 | |no_check| | Italy - Fiscal localization by zeroincombenze(R)   |
 +--------------------------------------+------------+------------+----------------------------------------------------+
@@ -129,11 +131,13 @@ Avaiable Addons / Moduli disponibili
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_ricevute_bancarie            | 10.0.1.1.0 | 10.0.1.2.0 | Ricevute Bancarie                                  |
 +--------------------------------------+------------+------------+----------------------------------------------------+
+| l10n_it_sdi_channel                  | |no_check| | 10.0.1.1.0 | Add channel to send-receice xml files to SdI.      |
++--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_split_payment                | 10.0.1.0.2 | 10.0.1.1.0 | Split Payment                                      |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_vat_communication            | |halt|     | |no_check| | Comunicazione periodica IVA                        |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_vat_registries               | 10.0.1.2.2 | 10.0.1.2.1 | Italian Localization - VAT Registries              |
+| l10n_it_vat_registries               | 10.0.1.2.2 | |same|     | Italian Localization - VAT Registries              |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_vat_registries_cash_basis    | 10.0.1.0.0 | |same|     | Italian Localization - VAT Registries - Cash Basis |
 +--------------------------------------+------------+------------+----------------------------------------------------+
@@ -156,19 +160,17 @@ Avaiable Addons / Moduli disponibili
 OCA comparation / Confronto con OCA
 -----------------------------------
 
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Description / Descrizione            | Odoo Italia      | OCA             | Notes / Note                                                                |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Ricerca per CAP, città e provincia   | |check|          | |no_check|      |                                                                             |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Dati comuni/province italiane        | 2014             | 2013            |                                                                             |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Piano dei conti evoluto              | |check|          | |no_check|      |                                                                             |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Codici IVA completi                  | |check|          | |no_check|      |                                                                             |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
-| Validazione Codice Fiscale           | |check|          | |no_check|      |                                                                             |
-+--------------------------------------+------------------+-----------------+-----------------------------------------------------------------------------+
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
+| Description / Descrizione            | Odoo Italia      | OCA             | Notes / Note                                                                       |
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
+| Gestione evoluta anagrafiche         | |check|          | |no_check|      | `l10n_it_base <https://github.com/zeroincombenze/l10n-italy/tree/8.0/l10n_it_base> |
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
+| Piano dei conti evoluto              | |check|          | |no_check|      |                                                                                    |
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
+| Codici IVA completi                  | |check|          | |no_check|      |                                                                                    |
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
+| Validazione Codice Fiscale           | |check|          | |no_check|      |                                                                                    |
++--------------------------------------+------------------+-----------------+------------------------------------------------------------------------------------+
 
 
 
@@ -289,7 +291,7 @@ La distribuzione `Zeroincombenze® è progettata per le esigenze del mercato ita
 
 |
 
-Last Update / Ultimo aggiornamento: 2018-11-19
+Last Update / Ultimo aggiornamento: 2018-12-03
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-red.png
     :target: https://odoo-community.org/page/development-status
@@ -307,9 +309,9 @@ Last Update / Ultimo aggiornamento: 2018-11-19
     :target: https://coveralls.io/github/zeroincombenze/l10n-italy?branch=10.0
     :alt: Coverage
 .. |Codecov Status| image:: https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0/graph/badge.svg
-    :target: https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0
+    :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
     :alt: Codecov
-.. |OCA project| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-oca-10.svg
+.. |OCA project| image:: Unknown badge-OCA
     :target: https://github.com/OCA/l10n-italy/tree/10.0
     :alt: OCA
 .. |Tech Doc| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-docs-10.svg
@@ -321,8 +323,8 @@ Last Update / Ultimo aggiornamento: 2018-11-19
 .. |Try Me| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg
     :target: https://erp10.zeroincombenze.it
     :alt: Try Me
-.. |OCA Codecov Status| image:: Unknown badge-oca-codecov
-    :target: Unknown oca-codecov-URL
+.. |OCA Codecov Status| image:: https://codecov.io/gh/OCA/l10n-italy/branch/10.0/graph/badge.svg
+    :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
     :alt: Codecov
 .. |Odoo Italia Associazione| image:: https://www.odoo-italia.org/images/Immagini/Odoo%20Italia%20-%20126x56.png
    :target: https://odoo-italia.org
@@ -345,10 +347,10 @@ Last Update / Ultimo aggiornamento: 2018-11-19
 .. |halt| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/awesome/halt.png
 .. |info| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/awesome/info.png
 .. |xml_schema| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/iso/icons/xml-schema.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/iso/scope/xml-schema.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/iso/scope/xml-schema.md
 .. |DesktopTelematico| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/DesktopTelematico.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/ade/scope/DesktopTelematico.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/Desktoptelematico.md
 .. |FatturaPA| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/fatturapa.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/ade/scope/fatturapa.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
    :target: https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b

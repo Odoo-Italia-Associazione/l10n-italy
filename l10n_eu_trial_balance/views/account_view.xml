@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_account_form_consol_ids">
+        <field name="name">account.form.consol</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="deprecated" position="before">
+                <field name="parent_consol_ids"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

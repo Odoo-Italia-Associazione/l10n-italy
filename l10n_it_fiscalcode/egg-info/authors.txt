@@ -1,0 +1,9 @@
+.. $if branch in '7.0'
+* Agile Business Group sagl <http://www.agilebg.com>
+* SHS-AV s.r.l. <https://www.zeroincombenze.it/>
+.. $elif branch in '10.0'
+* Agile Business Group sagl <http://www.agilebg.com>
+* Abstract <https://www.abstract.it>
+* Apulia Software <https://www.apuliasoftware.it>
+* SHS-AV s.r.l. <https://www.zeroincombenze.it/>
+.. $fi

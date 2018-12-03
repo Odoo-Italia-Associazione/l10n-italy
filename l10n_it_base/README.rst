@@ -258,7 +258,7 @@ La distribuzione `Zeroincombenze® è progettata per le esigenze del mercato ita
 
 |
 
-Last Update / Ultimo aggiornamento: 2018-11-19
+Last Update / Ultimo aggiornamento: 2018-12-03
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-red.png
     :target: https://odoo-community.org/page/development-status
@@ -276,9 +276,9 @@ Last Update / Ultimo aggiornamento: 2018-11-19
     :target: https://coveralls.io/github/zeroincombenze/l10n-italy?branch=10.0
     :alt: Coverage
 .. |Codecov Status| image:: https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0/graph/badge.svg
-    :target: https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0
+    :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
     :alt: Codecov
-.. |OCA project| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-oca-10.svg
+.. |OCA project| image:: Unknown badge-OCA
     :target: https://github.com/OCA/l10n-italy/tree/10.0
     :alt: OCA
 .. |Tech Doc| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-docs-10.svg
@@ -290,8 +290,8 @@ Last Update / Ultimo aggiornamento: 2018-11-19
 .. |Try Me| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg
     :target: https://erp10.zeroincombenze.it
     :alt: Try Me
-.. |OCA Codecov Status| image:: Unknown badge-oca-codecov
-    :target: Unknown oca-codecov-URL
+.. |OCA Codecov Status| image:: https://codecov.io/gh/OCA/l10n-italy/branch/10.0/graph/badge.svg
+    :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
     :alt: Codecov
 .. |Odoo Italia Associazione| image:: https://www.odoo-italia.org/images/Immagini/Odoo%20Italia%20-%20126x56.png
    :target: https://odoo-italia.org
@@ -314,10 +314,10 @@ Last Update / Ultimo aggiornamento: 2018-11-19
 .. |halt| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/awesome/halt.png
 .. |info| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/awesome/info.png
 .. |xml_schema| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/iso/icons/xml-schema.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/iso/scope/xml-schema.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/iso/scope/xml-schema.md
 .. |DesktopTelematico| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/DesktopTelematico.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/ade/scope/DesktopTelematico.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/Desktoptelematico.md
 .. |FatturaPA| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/fatturapa.png
-   :target: https://raw.githubusercontent.com/zeroincombenze/grymbcertificates/ade/scope/fatturapa.md
+   :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
    :target: https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b

@@ -1,0 +1,24 @@
+Feature / Funzione,Status,Notes / Note
+Fatture clienti e fornitori detraibili,|check|,Fatture ordinarie
+Fatture fornitori indetraibili,|check|,Tutte le percentuali di indetraibilità
+Fatture a privati senza Partita IVA,|check|,Necessario codice fiscale
+Fatture semplificata,|check|,Per clienti senza PI ne CF
+Fatture senza IVA,|check|,"Fatture esenti, NI, escluse, eccetera"
+Escludi importi Fuori Campo IVA,|check|,Totale fattura in Comunicazione può essere diverso da registrazione
+Controlla CAP e provincia Italia in comunicazione,|check|,"Da nazione, oppure da partita IVA oppure Italia"
+Converti CF no Italia in comunicazione,|check|,"Da nazione, oppure da partita IVA oppure Italia"
+Controlli dati anagrafici,|check|,Controlli Agenzia Entrate
+Conversione utf-8,|check|,Lo Spesometro 2017 richiedeva ISO-Latin1
+IVA differita,|check|,Da codice imposte
+IVA da split-payment,|check|,Da codice imposte
+Ignora autofatture,|check|,Esclusione tramite sezionale
+Ignora corrispettivi,|check|,Esclusione tramite sezionale
+Ignora avvisi di parcella,|check|,Esclusione tramite sezionale
+Identificazione Reverse Charge,|check|,Da codice imposte
+Fatture vendita UE,|check|,Inserite in spesometro
+Fatture vendita extra-UE,|check|,Inserite in spesometro
+Fatture acq. intra-UE beni,|no_check|,In fase di rilascio
+Fatture acq. intra-UE servizi,|check|,Tutte le fatture EU (provvisoriamente)
+Rettifica dichiarazione,|no_check|,In fase di rilascio
+Nomenclatura del file,|check|,
+Dimensioni del file,|no_check|,Nessuna verifica anche futura

@@ -1,0 +1,4 @@
+Features,6.1,7.0,8.0,9.0,10.0,11.0,12.0
+Customer ref in Sale Order tree,|no_check|,|no_check|,|no_check|,|no_check|,|check|,|no_check|,|info|
+Refund (credit note) invoice menu,|same|,|same|,|same|,|same|,|check|,|same|,|info|
+Invoice group by company,|no_check|,|no_check|,|no_check|,|check|,|check|,|no_check|,|info|

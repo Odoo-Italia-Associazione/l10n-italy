@@ -10,7 +10,7 @@
 {
     'name': 'EInvoice + FatturaPA',
     'summary': 'Infrastructure for Italian Electronic Invoice + FatturaPA',
-    'version': '10.0.2.0.1',
+    'version': '10.0.2.1.1',
     'category': 'Localization/Italy',
     'author': 'Odoo Italia Associazione,'
               'Odoo Community Association (OCA)',
@@ -26,9 +26,7 @@
         'l10n_it_ade',
         'l10n_it_pec',
         'l10n_it_fiscal_payment_term',
-        # 'l10n_it_esigibilita_iva',
-        # 'l10n_it_split_payment',
-        ],
+    ],
     "data": [
         'security/ir.model.access.csv',
         'data/fatturapa_fiscal_position.xml',

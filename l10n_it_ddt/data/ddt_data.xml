@@ -53,6 +53,7 @@
     <record id="transportation_reason_RES" model="stock.picking.transportation_reason">
         <field name="name">Reso Merce</field>
     </record>
+<!-- c/lavorazione -->
 
     <!-- trasportation methods -->
     <record id="transportation_method_MIT" model="stock.picking.transportation_method">

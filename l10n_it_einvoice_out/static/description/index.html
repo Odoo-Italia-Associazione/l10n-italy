@@ -1,11 +1,14 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color:#162832;">Italian Localization - FatturaPA - Emission / Fattura Elettronica + FatturaPA</h2>
-    </div>
-    <div class="oe_span6 text-center">
-        <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
-        <p class="oe_mt16" align="justify"><p align="justify">
+        <div class="oe_span12">
+            <h2 class="oe_slogan" style="color:#162832;">Italian Localization - FatturaPA - Emission / Fattura Elettronica + FatturaPA</h2>
+        </div>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
+            </p>
+            <p class="oe_mt16" align="justify"><p align="justify">
 This module allows you to generate the fatturaPA XML file version 1.2
 which will be sent to the SdI (Exchange System by Italian Tax Authority)
 </p><p align="justify">
@@ -13,13 +16,15 @@ http://www.fatturapa.gov.it/export/fatturazione/it/normativa/norme.htm
 </p><p align="justify">
 <span class="fa fa-exclamation-triangle" style="color:orange"/> Read carefully note of module l10n_it_einvoice_base before install this module
 </p><p align="justify">
-|<span class="fa fa-minus-circle" style="color:red"/>| Do not use this module on production environment: it is an aplha release
+<span class="fa fa-minus-circle" style="color:red"/> Do not use this module on production environment: it is an aplha release
 subjected to update.
 </p></p>
-    </div>
-    <div class="oe_span6 text-center">
-        <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
-        <p class="oe_mt16" align="justify"><p align="justify">
+        </div>
+        <div class="oe_span6">
+            <p align="center">
+                <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
+            </p>
+            <p class="oe_mt16" align="justify"><p align="justify">
 Questo modulo permette di generare il file xml della fatturaPA versione 1.2
 da trasmettere al sistema di interscambio SdI.
 </p><p align="justify">
@@ -33,8 +38,39 @@ segnalato dall'errore:
 </p><p align="justify">
 Tutti i moduli della localizzazione italiana che generano file xml dipendenti
 dallo schema dell'Agenzia delle Entrate **devono** dichiare il modulo
-<a href="../l10n_it_ade">l10n_it_ade</a> 
+<a href="../l10n_it_ade">l10n_it_ade</a> come dipendenza.
+</p><p align="justify">
+Per maggiori informazioni visitare il sito www.odoo-italia.org o contattare
+l'ultimo autore: Antonio M. Vigliotti &lt;antoniomaria.vigliotti@gmail.com&gt;.
+</p><p align="justify">
+<span class="fa fa-minus-circle" style="color:red"/> Non utilizzare ancora questo modulo in produzione: alpha release soggetta
+ad ulteriori modifiche
 </p></p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan" style="color:#162832;">Usage / Utilizzo</h3>
+        <div class="oe_span12">
+<p align="justify">
+<span class="fa fa-navicon"/> Configurazione &gt; Configurazione &gt; Contabilit&#224; &gt; Fattura PA |do_right| Impostare i vari parametri
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Sezionali &gt; Sezionali |do_right| Impostare sezionale fattura elettronica
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Imposte &gt; Imposte |do_right| Impostare natura codici IVA
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Management &gt; Termini di pagamento |do_right| Collegare i termini di pagamento con i relativi termini fiscali
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Clienti &gt; Clienti |do_right| Impostare Codice Destinatario o PEC o IPA, nazione, partita IVA, codice fiscale
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Contabilit&#224; &gt; Posizioni fiscali |do_right| Collegare posizioni fiscali con regimi fiscali
+</p><p align="justify">
+Per consultazione (non modificare):
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Contabilit&#224; &gt; Definizioni Agenzia delle Entrate &gt; Natura dell'IVA
+</p><p align="justify">
+<span class="fa fa-navicon"/> Contabilit&#224; &gt; Configurazione &gt; Contabilit&#224; &gt; Definizioni Agenzia delle Entrate &gt; Tipi Fattura
+</p>
+        </div>
     </div>
 </section>
 
@@ -44,22 +80,26 @@ dallo schema dell'Agenzia delle Entrate **devono** dichiare il modulo
     <div class="oe_row oe_spaced">
         <div class="oe_span6" align="left">
             <p class="oe_mt16">Authors / Autori:</p>
-            <p class="oe_mt16"><ul>
-<li>Agile Business Group sagl &lt;https://www.agilebg.com/&gt;</li>
-<li>Innoviu srl &lt;http://www.innoviu.com&gt;</li>
-<li>SHS-AV s.r.l. &lt;https://www.zeroincombenze.it/&gt;</li>
-</ul></p>
+            <p class="oe_mt16"><p align="justify">
+<ul>
+<li><a href="https://www.agilebg.com/">Agile Business Group sagl</a></li>
+<li><a href="http://www.innoviu.com">Innoviu srl</a></li>
+<li><a href="https://www.zeroincombenze.it/">SHS-AV s.r.l.</a></li>
+</ul>
+</p></p>
         </div>
         <div class="oe_span6" align="left">
-            <p class="oe_mt16">Contributors / Contributi:</p>
-            <p class="oe_mt16"><ul>
+            <p class="oe_mt16">Contributors / Collaboratori:</p>
+            <p class="oe_mt16"><p align="justify">
+<ul>
 <li>Davide Corio &lt;davide.corio@abstract.it&gt;</li>
 <li>Roberto Onnis &lt;roberto.onnis@innoviu.com&gt;</li>
 <li>Lorenzo Battistini &lt;lorenzo.battistini@agilebg.com&gt;</li>
 <li>Alessio Gerace &lt;alessio.gerace@agilebg.com&gt;</li>
 <li>Alex Comba &lt;alex.comba@agilebg.com&gt;</li>
 <li>Antonio Maria Vigliotti &lt;antoniomaria.vigliotti@gmail.com&gt;</li>
-</ul></p>
+</ul>
+</p></p>
         </div>
     </div>
 </section>

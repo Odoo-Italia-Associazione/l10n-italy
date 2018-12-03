@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2014    - Davide Corio
-# Copyright 2015-16 - Lorenzo Battistini - Agile Business Group
+# Copyright 2014    - Davide Corio <davide.corio@lsweb.it>
+# Copyright 2015    - Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 # Copyright 2018-19 - SHS-AV s.r.l. <https://www.zeroincombenze.it>
 # Copyright 2018-19 - Odoo Italia Associazione <https://www.odoo-italia.org>
 #
@@ -94,12 +94,11 @@ class WizardExportFatturapa(models.TransientModel):
             raise UserError(msg)
         return number
 
-
     def _string2codeset(self, text):
         return text.encode('latin', 'ignore').decode('latin')
 
     def _wep_phone_number(self, phone):
-        """"Remove trailing +39 abd all no numeric chars"""
+        """"Remove trailing +39 and all no numeric chars"""
         wep_phone = ''
         if phone:
             if phone[0:3] == '+39':
@@ -167,7 +166,6 @@ class WizardExportFatturapa(models.TransientModel):
         if pec_destinatario:
             fatturapa.FatturaElettronicaHeader.DatiTrasmissione. \
                 PECDestinatario = pec_destinatario
-
         return True
 
     def _setContattiTrasmittente(self, company, fatturapa):
@@ -177,12 +175,11 @@ class WizardExportFatturapa(models.TransientModel):
         Telefono = self._wep_phone_number(company.phone)
         if not company.email:
             raise UserError(
-                _('Email address not set.'))
+                _('Company Email not set.'))
         Email = company.email
         fatturapa.FatturaElettronicaHeader.DatiTrasmissione.\
             ContattiTrasmittente = ContattiTrasmittenteType(
                 Telefono=Telefono, Email=Email)
-
         return True
 
     def setDatiTrasmissione(self, company, partner, fatturapa):
@@ -194,10 +191,9 @@ class WizardExportFatturapa(models.TransientModel):
         self._setContattiTrasmittente(company, fatturapa)
 
     def _setDatiAnagraficiCedente(self, CedentePrestatore, company):
-
         if not company.vat:
             raise UserError(
-                _('TIN not set.'))
+                _('Company TIN not set.'))
         CedentePrestatore.DatiAnagrafici = DatiAnagraficiCedenteType()
         fatturapa_fp = company.fatturapa_fiscal_position_id
         if not fatturapa_fp:
@@ -258,7 +254,6 @@ class WizardExportFatturapa(models.TransientModel):
             Comune=company.city,
             Provincia=company.partner_id.state_id.code,
             Nazione=company.country_id.code)
-
         return True
 
     def _setStabileOrganizzazione(self, CedentePrestatore, company):
@@ -348,11 +343,9 @@ class WizardExportFatturapa(models.TransientModel):
         if partner.eori_code:
             fatturapa.FatturaElettronicaHeader.CessionarioCommittente.\
                 DatiAnagrafici.Anagrafica.CodEORI = partner.eori_code
-
         return True
 
     def _setSedeCessionario(self, partner, fatturapa):
-
         if not partner.street:
             raise UserError(
                 _('Customer street not set.'))
@@ -377,7 +370,6 @@ class WizardExportFatturapa(models.TransientModel):
                 Comune=partner.city,
                 Provincia=partner.state_id.code,
                 Nazione=partner.country_id.code))
-
         return True
 
     def setRappresentanteFiscale(self, company):
@@ -472,7 +464,6 @@ class WizardExportFatturapa(models.TransientModel):
 
         if invoice.company_id.fatturapa_art73:
             body.DatiGenerali.DatiGeneraliDocumento.Art73 = 'SI'
-
         return True
 
     def setRelatedDocumentTypes(self, invoice, body):
@@ -557,7 +548,7 @@ class WizardExportFatturapa(models.TransientModel):
                         line.invoice_line_tax_ids[0].name)
                 DettaglioLinea.Natura = line.invoice_line_tax_ids[
                     0
-                ].kind_id.code
+                ].non_taxable_nature
             if line.admin_ref:
                 DettaglioLinea.RiferimentoAmministrazione = line.admin_ref
             line_no += 1
@@ -582,10 +573,10 @@ class WizardExportFatturapa(models.TransientModel):
                 Imposta='%.2f' % tax_line.amount
             )
             if tax.amount == 0.0:
-                if not tax.kind_id:
+                if not tax.non_taxable_nature:
                     raise UserError(
                         _("No 'nature' field for tax %s") % tax.name)
-                riepilogo.Natura = tax.kind_id.code
+                riepilogo.Natura = tax.non_taxable_nature
                 if not tax.law_reference:
                     raise UserError(
                         _("No 'law reference' field for tax %s") % tax.name)
@@ -598,7 +589,6 @@ class WizardExportFatturapa(models.TransientModel):
             # el.remove(el.find('Arrotondamento'))
 
             body.DatiBeniServizi.DatiRiepilogo.append(riepilogo)
-
         return True
 
     def setDatiPagamento(self, invoice, body):
@@ -674,28 +664,21 @@ class WizardExportFatturapa(models.TransientModel):
         invoice_model = self.env['account.invoice']
         partner = False
         company = False
-
         invoices = invoice_model.browse(invoice_ids)
-
         for invoice in invoices:
             if not partner:
                 partner = invoice.partner_id
             if invoice.partner_id != partner:
                 raise UserError(
                     _('Invoices must belong to the same partner'))
-
             if not company:
                 company = invoice.company_id
             if invoice.company_id != company:
                 raise UserError(
                     _('Invoices must belong to the same company'))
-
         return company, partner
 
-        return partner
-
     def exportFatturaPA(self):
-
         # self.setNameSpace()
         model_data_model = self.env['ir.model.data']
         invoice_model = self.env['account.invoice']

@@ -15,11 +15,10 @@ msgstr ""
 "PO-Revision-Date: 2018-05-04 14:09+0000\n"
 "Last-Translator: Paolo Valier, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
 
 #. module: l10n_it_central_journal
 #: model:ir.actions.report.xml,name:l10n_it_central_journal.action_report_giornale
@@ -43,6 +42,7 @@ msgstr "Nome Conto"
 
 #. module: l10n_it_central_journal
 #: selection:wizard.giornale,target_move:0
+#: selection:wizard.giornale,target_move
 msgid "All"
 msgstr "Tutti"
 
@@ -76,12 +76,12 @@ msgstr "Creato da"
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_create_date
 msgid "Created on"
-msgstr "Creato il"
+msgstr "Data di creazione"
 
 #. module: l10n_it_central_journal
 #: model:ir.ui.view,arch_db:l10n_it_central_journal.report_giornale
 msgid "Credit"
-msgstr "Credito"
+msgstr "Avere"
 
 #. module: l10n_it_central_journal
 #: model:ir.ui.view,arch_db:l10n_it_central_journal.report_giornale
@@ -95,7 +95,7 @@ msgstr "Intervallo Date"
 
 #. module: l10n_it_central_journal
 #: code:addons/l10n_it_central_journal/wizard/print_giornale.py:117
-#, python-format
+#: code:addons/l10n_it_central_journal/wizard/print_giornale.py:117
 msgid "Date already printed"
 msgstr "Data già stampata"
 
@@ -107,16 +107,17 @@ msgstr "Date dei movimenti"
 #. module: l10n_it_central_journal
 #: model:ir.ui.view,arch_db:l10n_it_central_journal.report_giornale
 msgid "Debit"
-msgstr "Debito"
+msgstr "Dare"
 
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_report_l10n_it_central_journal_report_giornale_display_name
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_display_name
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Visualizza nome"
 
 #. module: l10n_it_central_journal
 #: selection:wizard.giornale,target_move:0
+#: selection:wizard.giornale,target_move
 msgid "Draft"
 msgstr "Bozza"
 
@@ -155,19 +156,19 @@ msgstr "Saldo iniziale"
 #. module: l10n_it_central_journal
 #: model:ir.model,name:l10n_it_central_journal.model_account_journal
 msgid "Journal"
-msgstr "Giornale"
+msgstr "Registro"
 
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_journal_ids
 #: model:ir.ui.view,arch_db:l10n_it_central_journal.wizard_giornale
 msgid "Journals"
-msgstr "Giornali"
+msgstr "Registri"
 
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_report_l10n_it_central_journal_report_giornale___last_update
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale___last_update
 msgid "Last Modified on"
-msgstr "Ultima modifica il"
+msgstr "Data ultima modifica"
 
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_write_uid
@@ -177,7 +178,7 @@ msgstr "Ultima modifica di"
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_write_date
 msgid "Last Updated on"
-msgstr "Ultimo aggiornamento il"
+msgstr "Data ultima modifica"
 
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_last_def_date_print
@@ -192,7 +193,7 @@ msgstr "Ultima datadi stampa"
 #. module: l10n_it_central_journal
 #: model:ir.model.fields,field_description:l10n_it_central_journal.field_wizard_giornale_fiscal_page_base
 msgid "Last printed page"
-msgstr "Ultima pagina stampata"
+msgstr "Ultima pagina su bollato"
 
 #. module: l10n_it_central_journal
 #: model:ir.ui.view,arch_db:l10n_it_central_journal.wizard_giornale
@@ -207,12 +208,14 @@ msgstr "Nome"
 #. module: l10n_it_central_journal
 #: code:addons/l10n_it_central_journal/wizard/print_giornale.py:95
 #: code:addons/l10n_it_central_journal/wizard/print_giornale.py:131
-#, python-format
+#: code:addons/l10n_it_central_journal/wizard/print_giornale.py:95
+#: code:addons/l10n_it_central_journal/wizard/print_giornale.py:131
 msgid "No documents found in the current selection"
 msgstr "Nessun documento trovato per la selezione corrente"
 
 #. module: l10n_it_central_journal
 #: selection:wizard.giornale,target_move:0
+#: selection:wizard.giornale,target_move
 msgid "Posted"
 msgstr "Pubblicato"
 
@@ -223,6 +226,7 @@ msgstr "Stampa"
 
 #. module: l10n_it_central_journal
 #: selection:wizard.giornale,print_state:0
+#: selection:wizard.giornale,print_state
 msgid "Printed"
 msgstr "Stampato"
 
@@ -254,6 +258,7 @@ msgstr ""
 
 #. module: l10n_it_central_journal
 #: selection:wizard.giornale,print_state:0
+#: selection:wizard.giornale,print_state
 msgid "Ready for printing"
 msgstr "Pronto per la stampa"
 
@@ -306,3 +311,4 @@ msgstr "report.l10n_it_central_journal.report_giornale"
 #: model:ir.model,name:l10n_it_central_journal.model_wizard_giornale
 msgid "wizard.giornale"
 msgstr "Wizard libro giornale"
+

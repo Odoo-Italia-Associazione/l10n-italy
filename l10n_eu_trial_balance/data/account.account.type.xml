@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="account.account.type" id="account_type_legalview1">
+        <field name="name">Sezione Bilancio</field>
+        <field name="type">other</field>
+    </record>
+    <record model="account.account.type" id="account_type_legalview2">
+        <field name="name">Titolo Bilancio</field>
+        <field name="type">other</field>
+    </record>
+    <record model="account.account.type" id="account_type_legalview3">
+        <field name="name">Voce Bilancio</field>
+        <field name="type">other</field>
+    </record>
+    <record model="account.account.type" id="account_type_legalview4">
+        <field name="name">Sotto-voce Bilancio</field>
+        <field name="type">other</field>
+    </record>
+</odoo>
