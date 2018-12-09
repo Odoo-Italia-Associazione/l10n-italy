@@ -7,6 +7,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 #
 from odoo import api, fields, models
+import odoo.addons.decimal_precision as dp
 
 RELATED_DOCUMENT_TYPES = {
     'order': 'DatiOrdineAcquisto',
@@ -25,7 +26,7 @@ EU_COUNTRIES = ['AT', 'BE', 'BG', 'CY', 'HR', 'DK', 'EE',
 class FatturapaFormat(models.Model):
     # _position = ['1.1.3']
     _name = "fatturapa.format"
-    _description = 'FatturaPA Format'
+    _description = 'E-invoice Format'
 
     name = fields.Char('Description', size=128)
     code = fields.Char('Code', size=5)
@@ -34,7 +35,7 @@ class FatturapaFormat(models.Model):
 class FatturapaPaymentData(models.Model):
     # _position = ['2.4.2.2']
     _name = "fatturapa.payment.data"
-    _description = 'FatturaPA Payment Data'
+    _description = 'E-invoice Payment Data'
 
     #  2.4.1
     payment_terms = fields.Many2one(
@@ -53,17 +54,18 @@ class FatturapaPaymentDetail(models.Model):
     _name = "fatturapa.payment.detail"
     recipient = fields.Char('Recipient', size=200)
     fatturapa_pm_id = fields.Many2one(
-        'fatturapa.payment_method', string="Electronic Invoice Payment Method")
+        'fatturapa.payment_method', string="Electronic Invoice Payment Method"
+    )
     payment_term_start = fields.Date('Payment Term Start')
     payment_days = fields.Integer('Payment Term Days')
-    payment_due_date = fields.Date('Payment due Date')
+    payment_due_date = fields.Date('Payment Due Date')
     payment_amount = fields.Float('Payment Amount')
     post_office_code = fields.Char('Post Office Code', size=20)
-    recepit_name = fields.Char("Recepit payment partner firstname")
-    recepit_surname = fields.Char("Recepit payment partner lastname")
-    recepit_cf = fields.Char("Recepit payment partner fiscalnumber")
-    recepit_title = fields.Char("Recepit payment partner title")
-    payment_bank_name = fields.Char("Bank name")
+    recepit_name = fields.Char("Recepit Partner Firstname")
+    recepit_surname = fields.Char("Recepit Partner Lastname")
+    recepit_cf = fields.Char("Recepit Partner Fiscalnumber")
+    recepit_title = fields.Char("Recepit Partner Title")
+    payment_bank_name = fields.Char("Bank Name")
     payment_bank_iban = fields.Char("IBAN")
     payment_bank_abi = fields.Char("ABI")
     payment_bank_cab = fields.Char("CAB")
@@ -71,14 +73,14 @@ class FatturapaPaymentDetail(models.Model):
     payment_bank = fields.Many2one(
         'res.partner.bank', string="Payment Bank")
     prepayment_discount = fields.Float('Prepayment Discount')
-    max_payment_date = fields.Date('Maximum date for Payment')
-    penalty_amount = fields.Float('Amount of Penality')
-    penalty_date = fields.Date('Effective date of Penality')
-    payment_code = fields.Char('Payment code')
+    max_payment_date = fields.Date('Maximum Date for Payment')
+    penalty_amount = fields.Float('Amount of Penalty')
+    penalty_date = fields.Date('Effective Date of Penalty')
+    payment_code = fields.Char('Payment Code')
     account_move_line_id = fields.Many2one(
         'account.move.line', string="Payment Line")
     payment_data_id = fields.Many2one(
-        'fatturapa.payment.data', 'Related payments Data',
+        'fatturapa.payment.data', 'Related Payments Data',
         ondelete='cascade', index=True)
 
 
@@ -94,28 +96,28 @@ class FatturapaFiscalPosition(models.Model):
 class WelfareFundType(models.Model):
     # _position = ['2.1.1.7.1']
     _name = "welfare.fund.type"
-    _description = 'welfare fund type'
+    _description = 'Welfare Fund Type'
 
-    name = fields.Char('name')
-    description = fields.Char('description')
+    name = fields.Char('Name')
+    description = fields.Char('Description')
 
 
 class WelfareFundDataLine(models.Model):
     # _position = ['2.1.1.7']
     _name = "welfare.fund.data.line"
-    _description = 'FatturaPA Welfare Fund Data'
+    _description = 'E-invoice Welfare Fund Data'
 
     name = fields.Many2one(
         'welfare.fund.type', string="Welfare Fund Type")
     tax_nature_id = fields.Many2one('italy.ade.tax.nature',
                                     string="No taxable nature")
-    welfare_rate_tax = fields.Float('Welfare Rate tax')
-    welfare_amount_tax = fields.Float('Welfare Amount tax')
+    welfare_rate_tax = fields.Float('Welfare Tax Rate')
+    welfare_amount_tax = fields.Float('Welfare Tax Amount')
     welfare_taxable = fields.Float('Welfare Taxable')
-    welfare_Iva_tax = fields.Float('Welfare tax')
+    welfare_Iva_tax = fields.Float('VAT Tax Rate')
     subjected_withholding = fields.Char(
         'Subjected to Withholding', size=2)
-    pa_line_code = fields.Char('PA Code for this record', size=20)
+    pa_line_code = fields.Char('PA Code for this Record', size=20)
     invoice_id = fields.Many2one(
         'account.invoice', 'Related Invoice',
         ondelete='cascade', index=True
@@ -125,12 +127,12 @@ class WelfareFundDataLine(models.Model):
 class DiscountRisePrice(models.Model):
     # _position = ['2.1.1.8', '2.2.1.10']
     _name = "discount.rise.price"
-    _description = 'FatturaPA Discount Rise Price Data'
+    _description = 'E-invoice Discount Supplement Data'
 
     name = fields.Selection(
-        [('SC', 'Discount'), ('MG', 'Rise Price')], 'Type')
+        [('SC', 'Discount'), ('MG', 'Supplement')], 'Type')
     percentage = fields.Float('Percentage')
-    amount = fields.Float('Amount')
+    amount = fields.Float('Amount', digits=dp.get_precision('Discount'))
     invoice_line_id = fields.Many2one(
         'account.invoice.line', 'Related Invoice',
         ondelete='cascade', index=True
@@ -144,7 +146,7 @@ class DiscountRisePrice(models.Model):
 class FatturapaRelatedDocumentType(models.Model):
     # _position = ['2.1.2', '2.2.3', '2.1.4', '2.1.5', '2.1.6']
     _name = 'fatturapa.related_document_type'
-    _description = 'FatturaPA Related Document Type'
+    _description = 'E-invoice Related Document Type'
 
     type = fields.Selection(
         [
@@ -156,8 +158,8 @@ class FatturapaRelatedDocumentType(models.Model):
         ],
         'Document Type', required=True
     )
-    name = fields.Char('DocumentID', size=20, required=True)
-    lineRef = fields.Integer('LineRef')
+    name = fields.Char('Document ID', size=20, required=True)
+    lineRef = fields.Integer('Line Ref.')
     invoice_line_id = fields.Many2one(
         'account.invoice.line', 'Related Invoice Line',
         ondelete='cascade', index=True)
@@ -165,7 +167,7 @@ class FatturapaRelatedDocumentType(models.Model):
         'account.invoice', 'Related Invoice',
         ondelete='cascade', index=True)
     date = fields.Date('Date')
-    numitem = fields.Char('NumItem', size=20)
+    numitem = fields.Char('Item Num.', size=20)
     code = fields.Char('Order Agreement Code', size=100)
     cig = fields.Char('CIG Code', size=15)
     cup = fields.Char('CUP Code', size=15)
@@ -193,7 +195,7 @@ class FaturapaActivityProgress(models.Model):
 class FatturaAttachments(models.Model):
     # _position = ['2.5']
     _name = "fatturapa.attachments"
-    _description = "FatturaPA attachments"
+    _description = "E-invoice attachments"
     _inherits = {'ir.attachment': 'ir_attachment_id'}
 
     ir_attachment_id = fields.Many2one(
@@ -208,11 +210,11 @@ class FatturaAttachments(models.Model):
 class FatturapaRelatedDdt(models.Model):
     # _position = ['2.1.2', '2.2.3', '2.1.4', '2.1.5', '2.1.6']
     _name = 'fatturapa.related_ddt'
-    _description = 'FatturaPA Related DdT'
+    _description = 'E-invoice Related DDT'
 
-    name = fields.Char('DocumentID', size=20, required=True)
+    name = fields.Char('Document ID', size=20, required=True)
     date = fields.Date('Date')
-    lineRef = fields.Integer('LineRef')
+    lineRef = fields.Integer('Line Ref.')
     invoice_line_id = fields.Many2one(
         'account.invoice.line', 'Related Invoice Line',
         ondelete='cascade', index=True)
@@ -245,9 +247,9 @@ class AccountInvoiceLine(models.Model):
     admin_ref = fields.Char('Administration ref.', size=20, copy=False)
     discount_rise_price_ids = fields.One2many(
         'discount.rise.price', 'invoice_line_id',
-        'Discount and Rise Price Details', copy=False
+        'Discount or Supplement Details', copy=False
     )
-    ftpa_line_number = fields.Integer("Line number", readonly=True, copy=False)
+    ftpa_line_number = fields.Integer("Line Number", readonly=True, copy=False)
 
 
 class FaturapaSummaryData(models.Model):
@@ -259,8 +261,8 @@ class FaturapaSummaryData(models.Model):
         string="No taxable nature")
     incidental_charges = fields.Float('Incidental Charges')
     rounding = fields.Float('Rounding')
-    amount_untaxed = fields.Float('Amount untaxed')
-    amount_tax = fields.Float('Amount tax')
+    amount_untaxed = fields.Float('Amount Untaxed')
+    amount_tax = fields.Float('Amount Tax')
     payability = fields.Selection([
         ('I', 'Immediate payability'),
         ('D', 'Deferred payability'),
@@ -280,15 +282,15 @@ class AccountInvoice(models.Model):
     # 1.2 -- partner_id
     # 1.3
     tax_representative_id = fields.Many2one(
-        'res.partner', string="Tax Rapresentative")
+        'res.partner', string="Tax Representative")
     #  1.4 company_id
     #  1.5
     intermediary = fields.Many2one(
         'res.partner', string="Intermediary")
     #  1.6
     sender = fields.Selection(
-        [('CC', 'assignee / partner'),
-         ('TZ', 'third person')], 'Sender')
+        [('CC', 'Assignee / Partner'),
+         ('TZ', 'Third Person')], 'Sender')
     # 2.1.1.1 FIXME doc_type
     invoice_type_id = fields.Many2one(
         'italy.ade.invoice.type', string="Document Type",)
@@ -297,7 +299,7 @@ class AccountInvoice(models.Model):
     ftpa_withholding_type = fields.Selection(
         [('RT01', 'Natural Person'),
          ('RT02', 'Legal Person')],
-        'Withholding type'
+        'Withholding Type'
     )
     #  2.1.1.5.2 withholding_amount in module
     #  2.1.1.5.3
@@ -321,7 +323,7 @@ class AccountInvoice(models.Model):
     #  2.1.7
     activity_progress_ids = fields.One2many(
         'faturapa.activity.progress', 'invoice_id',
-        'Fase of Activity Progress', copy=False
+        'Phase of Activity Progress', copy=False
     )
     #  2.1.8
     ftpa_related_ddts = fields.One2many(
@@ -333,9 +335,9 @@ class AccountInvoice(models.Model):
         'res.partner', string="Carrier", copy=False)
     transport_vehicle = fields.Char('Vehicle', size=80, copy=False)
     transport_reason = fields.Char('Reason', size=80, copy=False)
-    number_items = fields.Integer('number of items', copy=False)
+    number_items = fields.Integer('Number of Items', copy=False)
     description = fields.Char('Description', size=100, copy=False)
-    unit_weight = fields.Char('Weight unit', size=10, copy=False)
+    unit_weight = fields.Char('Weight Unit', size=10, copy=False)
     gross_weight = fields.Float('Gross Weight', copy=False)
     net_weight = fields.Float('Net Weight', copy=False)
     pickup_datetime = fields.Datetime('Pick up', copy=False)
@@ -344,13 +346,13 @@ class AccountInvoice(models.Model):
     delivery_datetime = fields.Datetime('Delivery Date Time', copy=False)
     ftpa_incoterms = fields.Char(string="Incoterms", copy=False)
     #  2.1.10
-    related_invoice_code = fields.Char('Related invoice code', copy=False)
-    related_invoice_date = fields.Date('Related invoice date', copy=False)
+    related_invoice_code = fields.Char('Related Invoice Code', copy=False)
+    related_invoice_date = fields.Date('Related Invoice Date', copy=False)
     #  2.2.1 invoice lines
     #  2.2.2
     fatturapa_summary_ids = fields.One2many(
         'faturapa.summary.data', 'invoice_id',
-        'Electronic Invoice Summary Datas'
+        'Electronic Invoice Summary Data', copy=False
     )
     #  2.3
     vehicle_registration = fields.Date('Vehicle Registration', copy=False)
@@ -358,58 +360,57 @@ class AccountInvoice(models.Model):
     #  2.4
     fatturapa_payments = fields.One2many(
         'fatturapa.payment.data', 'invoice_id',
-        'FatturaPA Payment Datas'
+        'Electronic Invoice Payment Data', copy=False
     )
     #  2.5
     fatturapa_doc_attachments = fields.One2many(
         'fatturapa.attachments', 'invoice_id',
-        'Fattura Elettronica attachments', copy=False
+        'Electronic Invoice Attachments', copy=False
     )
     # 1.2.3
     efatt_stabile_organizzazione_indirizzo = fields.Char(
-        string="Indirizzo Organizzazione",
-        help="Blocco da valorizzare nei casi di cedente / prestatore non "
-             "residente, con stabile organizzazione in Italia. Indirizzo "
-             "della stabile organizzazione in Italia (nome della via, piazza "
-             "etc.)",
+        string="Organization Address",
+        help="The fields must be entered only when the seller/provider is "
+             "non-resident, with a stable organization in Italy. Address of "
+             "the stable organization in Italy (street name, square, etc.)",
         readonly=True, copy=False)
     efatt_stabile_organizzazione_civico = fields.Char(
-        string="Civico Organizzazione",
-        help="Numero civico riferito all'indirizzo (non indicare se già "
-             "presente nell'elemento informativo indirizzo)",
+        string="Organization Street Number",
+        help="Street number of the address (no need to specify if already "
+             "present in the address field)",
         readonly=True, copy=False)
     efatt_stabile_organizzazione_cap = fields.Char(
-        string="CAP Organizzazione",
-        help="Codice Avviamento Postale",
+        string="Organization ZIP",
+        help="ZIP Code",
         readonly=True, copy=False)
     efatt_stabile_organizzazione_comune = fields.Char(
-        string="Comune Organizzazione",
-        help="Comune relativo alla stabile organizzazione in Italia",
+        string="Organization Municipality",
+        help="Municipality or city to which the Stable Organization refers",
         readonly=True, copy=False)
     efatt_stabile_organizzazione_provincia = fields.Char(
-        string="Provincia Organizzazione",
-        help="Sigla della provincia di appartenenza del comune indicato "
-             "nell'elemento informativo 1.2.3.4 <Comune>. Da valorizzare se "
-             "l'elemento informativo 1.2.3.6 <Nazione> è uguale a IT",
+        string="Organization Province",
+        help="Acronym of the Province to which the municipality indicated "
+             "in the information element 1.2.3.4 <Comune> belongs. "
+             "Must be filled if the information element 1.2.3.6 <Nazione> is "
+             "equal to IT",
         readonly=True, copy=False)
     efatt_stabile_organizzazione_nazione = fields.Char(
-        string="Nazione Organizzazione",
-        help="Codice della nazione espresso secondo lo standard "
-             "ISO 3166-1 alpha-2 code",
+        string="Organization Country",
+        help="Country code according to the ISO 3166-1 alpha-2 code standard",
         readonly=True, copy=False)
     # 2.1.1.10
     efatt_rounding = fields.Float(
-        "Arrotondamento", readonly=True,
-        help="Eventuale arrotondamento sul totale documento (ammette anche il "
-             "segno negativo)", copy=False
+        "Rounding", readonly=True,
+        help="Possible total amount rounding on the document (negative sign "
+             "allowed)", copy=False
     )
     art73 = fields.Boolean(
-        'Art73', readonly=True,
-        help="Indica se il documento è stato emesso secondo modalità e "
-             "termini stabiliti con decreto ministeriale ai sensi "
-             "dell'articolo 73 del DPR 633/72 (ciò consente al "
-             "cedente/prestatore l'emissione nello stesso anno di più "
-             "documenti aventi stesso numero)", copy=False)
+        'Art. 73', readonly=True,
+        help="Indicates whether the document has been issued according to "
+             "methods and terms laid down in a ministerial decree under the "
+             "terms of Article 73 of Italian Presidential Decree 633/72 (this "
+             "enables the seller/provider to issue in the same year several "
+             "documents with same number)", copy=False)
 
     @api.model
     def default_get(self, fields):

@@ -1,10 +1,7 @@
-[![Build Status](https://travis-ci.org/zeroincombenze/l10n-italy.svg?branch=10.0)](https://travis-ci.org/zeroincombenze/l10n-italy)
+[![Build Status](https://travis-ci.org/Odoo-Italia-Associazione/l10n-italy.svg?branch=10.0)](https://travis-ci.org/Odoo-Italia-Associazione/l10n-italy)
 [![license lgpl](https://img.shields.io/badge/licence-LGPL--3-7379c3.svg)](https://www.gnu.org/licenses/lgpl.html)
-[![Coverage Status](https://coveralls.io/repos/github/zeroincombenze/l10n-italy/badge.svg?branch=10.0)](https://coveralls.io/github/zeroincombenze/l10n-italy?branch=10.0)
-[![codecov](https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0/graph/badge.svg)](https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0)
-[![OCA_project](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-oca-10.svg)](https://github.com/OCA/l10n-italy/tree/10.0)
-[![Tech Doc](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-docs-10.svg)](http://wiki.zeroincombenze.org/en/Odoo/10.0/dev)
-[![Help](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-help-10.svg)](http://wiki.zeroincombenze.org/en/Odoo/10.0/man/FI)
+[![Coverage Status](https://coveralls.io/repos/github/Odoo-Italia-Associazione/l10n-italy/badge.svg?branch=10.0)](https://coveralls.io/github/Odoo-Italia-Associazione/l10n-italy?branch=10.0)
+[![codecov](https://codecov.io/gh/Odoo-Italia-Associazione/l10n-italy/branch/10.0/graph/badge.svg)](https://codecov.io/gh/Odoo-Italia-Associazione/l10n-italy/branch/10.0)
 [![try it](http://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg)](https://erp10.zeroincombenze.it)
 
 
@@ -148,11 +145,18 @@ To contribute to this module, please visit https://odoo-community.org.
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-**zeroincombenze®** is a trademark of [SHS-AV s.r.l.](http://www.shs-av.com/)
-which distributes and promotes **Odoo** ready-to-use on own cloud infrastructure.
-[Zeroincombenze® distribution of Odoo](http://wiki.zeroincombenze.org/en/Odoo)
-is mainly designed for Italian law and markeplace.
-Users can download from [Zeroincombenze® distribution](https://github.com/zeroincombenze/OCB) and deploy on local server.
+**Odoo Italia Associazione**, or the [Associazione Odoo Italia](https://www.odoo-italia.org/)
+is the nonprofit Italian Community Association whose mission
+is to support the collaborative development of Odoo designed for Italian law and markeplace.
+Since 2017 Odoo Italia Associazione issues modules for Italian localization not developed by OCA
+or available only with Odoo Proprietary License.
+Odoo Italia Associazione distributes code under [AGPL](https://www.gnu.org/licenses/agpl-3.0.html) or [LGPL](https://www.gnu.org/licenses/lgpl.html) free license.
+
+[Odoo Italia Associazione](https://www.odoo-italia.org/) è un'Associazione senza fine di lucro
+che dal 2017 rilascia moduli per la localizzazione italiana non sviluppati da OCA
+o disponibili solo con [Odoo Proprietary License](https://www.odoo.com/documentation/user/9.0/legal/licenses/licenses.html).
+
+Odoo Italia Associazione distribuisce il codice esclusivamente con licenza [AGPL](https://www.gnu.org/licenses/agpl-3.0.html) o [LGPL](https://www.gnu.org/licenses/lgpl.html)
 
 [//]: # (end copyright)
 
@@ -162,4 +166,4 @@ Users can download from [Zeroincombenze® distribution](https://github.com/zeroi
 
 
 
-[![chat with us](https://www.shs-av.com/wp-content/chat_with_us.gif)](https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b)
+

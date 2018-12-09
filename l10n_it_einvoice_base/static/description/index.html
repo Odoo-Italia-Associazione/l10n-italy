@@ -2,26 +2,33 @@
 <section class="oe_container">
     <div class="oe_row oe_spaced">
         <div class="oe_span12">
-            <h2 class="oe_slogan" style="color:#162832;">EInvoice + FatturaPA / Fattura Elettronica + FatturaPA</h2>
+            <h2 class="oe_slogan" style="color:#162832;">Infrastructure for Italian Electronic Invoice + FatturaPA / Fattura Elettronica + FatturaPA</h2>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/en_US.png" alt="English"/>
             </p>
-            <p class="oe_mt16" align="justify"><p align="justify">
-This module manage infrastructure to manage Italian E Invoice and FatturaPA
-as per send to the SdI (Exchange System by Italian Tax Authority)
-</p></p>
+            <p class="oe_mt16" align="justify">This module manage infrastructure to manage Italian E Invoice and FatturaPA
+as per send to the SdI (Exchange System by Italian Tax Authority)</p>
         </div>
         <div class="oe_span6">
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
             </p>
-            <p class="oe_mt16" align="justify"><p align="justify">
-Questo modulo gestisce l'infrastruttura per generare il file xml della Fattura 
+            <p class="oe_mt16" align="justify">Questo modulo gestisce l'infrastruttura per generare il file xml della Fattura 
 Elettronica e della FatturaPA, versione 1.2, da trasmettere al sistema di interscambio SdI.
 </p><p align="justify">
-In anagrafica clienti &#232; disponibile una nuova linguetta ove inserire i dati per la fattura elettronica.
+In anagrafica clienti i dati per la fattura elettronica sono inseribili nella scheda "Agenzia delle Entrate".
+Selezionare "Soggetto a fattura elettronica" se il cliente &#232; soggetto alla fatturazione elettronica.
+Se soggetto alla fatturazione elettronica occorre compilare il "Codice destinatario" o la "PEC".
+Ai fini della fattura elettronica &#232; obbligatoria la partita IVA.
+Per fatturare un privato inserire il valore "0000000" nel codice destinatario e i codice fiscale.
+</p><p align="justify">
+Per la PA impostare "Pubblica Amministrazione" e compilare il "Codice ufficio".
+</p><p align="justify">
+Configurare le imposte riguardo a "Natura non imponibile", "Riferimento legisltativo" ed "Esigibilit&#224; IVA"
+</p><p align="justify">
+Configurare i dati della fattura elettronica nella configurazione della contabilit&#224;, dove necessario
 </p><p align="justify">
 ::
 </p><p align="justify">
@@ -34,8 +41,7 @@ Il modulo &#232; destinato a tutte le aziende che dal 2019 dovranno emettere fat
 </p><p align="justify">
     Normativa:
 </p><p align="justify">
-Le leggi inerenti la fattura elettronica sono numerose. Potete consultare la <a href="https://www.fatturapa.gov.it/export/fatturazione/it/normativa/norme.htm">normativa fattura elettronica</a>
-</p></p>
+Le leggi inerenti la fattura elettronica sono numerose. Potete consultare la <a href="https://www.fatturapa.gov.it/export/fatturazione/it/normativa/norme.htm">normativa fattura elettronica</a></p>
         </div>
     </div>
 </section>

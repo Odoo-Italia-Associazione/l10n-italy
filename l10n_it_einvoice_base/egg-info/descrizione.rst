@@ -4,7 +4,17 @@ Fattura Elettronica + FatturaPA
 Questo modulo gestisce l'infrastruttura per generare il file xml della Fattura 
 Elettronica e della FatturaPA, versione 1.2, da trasmettere al sistema di interscambio SdI.
 
-In anagrafica clienti è disponibile una nuova linguetta ove inserire i dati per la fattura elettronica.
+In anagrafica clienti i dati per la fattura elettronica sono inseribili nella scheda "Agenzia delle Entrate".
+Selezionare "Soggetto a fattura elettronica" se il cliente è soggetto alla fatturazione elettronica.
+Se soggetto alla fatturazione elettronica occorre compilare il "Codice destinatario" o la "PEC".
+Ai fini della fattura elettronica è obbligatoria la partita IVA.
+Per fatturare un privato inserire il valore "0000000" nel codice destinatario e i codice fiscale.
+
+Per la PA impostare "Pubblica Amministrazione" e compilare il "Codice ufficio".
+
+Configurare le imposte riguardo a "Natura non imponibile", "Riferimento legisltativo" ed "Esigibilità IVA"
+
+Configurare i dati della fattura elettronica nella configurazione della contabilità, dove necessario
 
 ::
 

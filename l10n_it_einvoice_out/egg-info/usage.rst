@@ -1,6 +1,3 @@
-Usage / Uso
-===========
-
 |menu| Configurazione > Configurazione > Contabilità > Fattura PA |do_right| Impostare i vari parametri
 
 |menu| Contabilità > Configurazione > Sezionali > Sezionali |do_right| Impostare sezionale fattura elettronica

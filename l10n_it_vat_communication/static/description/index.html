@@ -14,8 +14,7 @@
             <p align="center">
                 <img src="https://raw.githubusercontent.com/zeroincombenze/grymb/master/flags/it_IT.png" alt="Italiano"/>
             </p>
-            <p class="oe_mt16" align="justify"><p align="justify">
-Gestisce la Comunicazione periodica IVA con l'elenco delle fatture emesse e
+            <p class="oe_mt16" align="justify">Gestisce la Comunicazione periodica IVA con l'elenco delle fatture emesse e
 ricevute e genera il file da inviare all'Agenzia delle Entrate.
 Questo obbligo &#232; conosciuto anche come Spesometro light 2018 e sostistuisce i
 precedenti obbblighi chiamati Spesometro e Spesometro 2017.
@@ -26,8 +25,61 @@ la seguente istruzione:
 </p><p align="justify">
 ::
 </p><p align="justify">
-     export SPESOMETRO_VERSION=2.0
-</p></p>
+     export SPESOMETRO_VERSION=2.0</p>
+        </div>
+    </div>
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan" style="color:#162832;">Features / Caratteristiche</h3>
+        <div class="oe_span12">
+<table style="width:100%; padding:2px; border-spacing:2px; text-align:left;"><tr>
+<td>Feature / Funzione</td><td>Status</td><td>Notes / Note</td>
+</tr><tr>
+<td>Fatture clienti e fornitori detraibili</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Fatture ordinarie</td>
+</tr><tr>
+<td>Fatture fornitori indetraibili</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Tutte le percentuali di indetraibilit&#224;</td>
+</tr><tr>
+<td>Fatture a privati senza Partita IVA</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Necessario codice fiscale</td>
+</tr><tr>
+<td>Fatture semplificata</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Per clienti senza PI ne CF</td>
+</tr><tr>
+<td>Fatture senza IVA</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Fatture esenti, NI, escluse, eccetera</td>
+</tr><tr>
+<td>Escludi importi Fuori Campo IVA</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Totale fattura in Comunicazione pu&#242; essere diverso da registrazione</td>
+</tr><tr>
+<td>Controlla CAP e provincia Italia in comunicazione</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Da nazione, oppure da partita IVA oppure Italia</td>
+</tr><tr>
+<td>Converti CF no Italia in comunicazione</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Da nazione, oppure da partita IVA oppure Italia</td>
+</tr><tr>
+<td>Controlli dati anagrafici</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Controlli Agenzia Entrate</td>
+</tr><tr>
+<td>Conversione utf-8</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Lo Spesometro 2017 richiedeva ISO-Latin1</td>
+</tr><tr>
+<td>IVA differita</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Da codice imposte</td>
+</tr><tr>
+<td>IVA da split-payment</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Da codice imposte</td>
+</tr><tr>
+<td>Ignora autofatture</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Esclusione tramite sezionale</td>
+</tr><tr>
+<td>Ignora corrispettivi</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Esclusione tramite sezionale</td>
+</tr><tr>
+<td>Ignora avvisi di parcella</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Esclusione tramite sezionale</td>
+</tr><tr>
+<td>Identificazione Reverse Charge</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Da codice imposte</td>
+</tr><tr>
+<td>Fatture vendita UE</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Inserite in spesometro</td>
+</tr><tr>
+<td>Fatture vendita extra-UE</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Inserite in spesometro</td>
+</tr><tr>
+<td>Fatture acq. intra-UE beni</td><td><span class="fa fa-close" style="color:red"/></td><td>In fase di rilascio</td>
+</tr><tr>
+<td>Fatture acq. intra-UE servizi</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td>Tutte le fatture EU (provvisoriamente)</td>
+</tr><tr>
+<td>Rettifica dichiarazione</td><td><span class="fa fa-close" style="color:red"/></td><td>In fase di rilascio</td>
+</tr><tr>
+<td>Nomenclatura del file</td><td><span class="fa fa-check-square-o" style="color:green"/></td><td/>
+</tr><tr>
+<td>Dimensioni del file</td><td><span class="fa fa-close" style="color:red"/></td><td>Nessuna verifica anche futura</td>
+</tr></table>
         </div>
     </div>
     <div class="oe_row oe_spaced">

@@ -1,0 +1,2 @@
+* Davide Corio <davide.corio@abstract.it>
+* Lorenzo Battistini <lorenzo.battistini@agilebg.com>

@@ -1,7 +1,7 @@
 
-================================
-|Zeroincombenze| l10n-italy 10.0
-================================
+==========================================
+|Odoo Italia Associazione| l10n-italy 10.0
+==========================================
 
 |Maturity| |Build Status| |Coverage Status| |Codecov Status| |license gpl| |Tech Doc| |Help| |Try Me|
 
@@ -89,17 +89,17 @@ Avaiable Addons / Moduli disponibili
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_esigibilita_iva              | 10.0.1.0.0 | |same|     | Esigibilità IVA                                    |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa                    | |no_check| | 10.0.2.2.2 | Electronic invoices                                |
+| l10n_it_fatturapa                    | |no_check| | 10.0.2.2.2 | Fatture elettroniche                               |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_in                 | |no_check| | 10.0.1.2.1 | Electronic invoices reception                      |
+| l10n_it_fatturapa_in                 | |no_check| | 10.0.1.2.2 | Ricezione fatture elettroniche                     |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_in_purchase        | |no_check| | 10.0.1.0.0 | Fattura Elettronica - Purchase integration         |
+| l10n_it_fatturapa_in_purchase        | |no_check| | 10.0.1.0.0 | Modulo ponte tra ricezione fatture elettroniche e  |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_out                | |no_check| | 10.0.1.2.3 | Electronic invoices emission                       |
+| l10n_it_fatturapa_out                | |no_check| | 10.0.1.2.4 | Emissione fatture elettroniche                     |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_out_ddt            | |no_check| | 10.0.1.0.2 | Bridge module                                      |
+| l10n_it_fatturapa_out_ddt            | |no_check| | 10.0.1.0.2 | Modulo ponte tra emissione fatture elettroniche e  |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_fatturapa_pec                | |no_check| | 10.0.1.2.0 | Send electronic invoices via PEC                   |
+| l10n_it_fatturapa_pec                | |no_check| | 10.0.1.2.0 | Invio fatture elettroniche tramite PEC             |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_fiscal                       | 10.0.0.2.0 | |no_check| | Italy - Fiscal localization by zeroincombenze(R)   |
 +--------------------------------------+------------+------------+----------------------------------------------------+
@@ -131,13 +131,13 @@ Avaiable Addons / Moduli disponibili
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_ricevute_bancarie            | 10.0.1.1.0 | 10.0.1.2.0 | Ricevute Bancarie                                  |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_sdi_channel                  | |no_check| | 10.0.1.1.0 | Add channel to send-receice xml files to SdI.      |
+| l10n_it_sdi_channel                  | |no_check| | 10.0.1.1.0 | Aggiunge il canale di invio/ricezione dei file XML |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_split_payment                | 10.0.1.0.2 | 10.0.1.1.0 | Split Payment                                      |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_vat_communication            | |halt|     | |no_check| | Comunicazione periodica IVA                        |
 +--------------------------------------+------------+------------+----------------------------------------------------+
-| l10n_it_vat_registries               | 10.0.1.2.2 | |same|     | Italian Localization - VAT Registries              |
+| l10n_it_vat_registries               | 10.0.1.2.2 | 10.0.1.2.3 | Italian Localization - VAT Registries              |
 +--------------------------------------+------------+------------+----------------------------------------------------+
 | l10n_it_vat_registries_cash_basis    | 10.0.1.0.0 | |same|     | Italian Localization - VAT Registries - Cash Basis |
 +--------------------------------------+------------+------------+----------------------------------------------------+
@@ -213,7 +213,7 @@ Installation / Installazione
     cd ./tools
     ./install_tools.sh -p
     export PATH=$HOME/dev:$PATH
-    odoo_install_repository l10n-italy -b 10.0 -O zero
+    odoo_install_repository l10n-italy -b 10.0 -O oia
     for pkg in os0 z0lib; do
         pip install $pkg -U
     done
@@ -233,7 +233,7 @@ Upgrade / Aggiornamento
 
 ::
 
-    odoo_install_repository l10n-italy -b 10.0 -O zero -U
+    odoo_install_repository l10n-italy -b 10.0 -O oia -U
     # Adjust following statements as per your system
     sudo systemctl restart odoo
 
@@ -242,7 +242,7 @@ Support / Supporto
 ------------------
 
 
-|Zeroincombenze| This module is maintained by the `SHS-AV s.r.l. <https://www.zeroincombenze.it/>`__ and free support is supplied through `Odoo Italia Associazione Forum <https://odoo-italia.org/index.php/kunena/recente>`__
+|Odoo Italia Associazione| This module is maintained by the Odoo Italia Associazione and free support is supplied through its `forum <https://odoo-italia.org/index.php/kunena/recente>`__
 
 
 
@@ -251,7 +251,7 @@ Get involved / Ci mettiamo in gioco
 
 Bug reports are welcome! You can use the issue tracker to report bugs,
 and/or submit pull requests on `GitHub Issues
-<https://github.com/zeroincombenze/l10n-italy/issues>`_.
+<https://github.com/Odoo-Italia-Associazione/l10n-italy/issues>`_.
 
 In case of trouble, please check there if your issue has already been reported.
 
@@ -259,10 +259,8 @@ Proposals for enhancement
 -------------------------
 
 
-|en| If you have a proposal to change this module, you may want to send an email to <cc@shs-av.com> for initial feedback.
+If you have a proposal to change this module, you may want to send an email to <moderatore@odoo-italia.org> for initial feedback.
 An Enhancement Proposal may be submitted if your idea gains ground.
-
-|it| Se hai proposte per migliorare questo modulo, puoi inviare una mail a <cc@shs-av.com> per un iniziale contatto.
 
 Credits / Titoli di coda
 ========================
@@ -276,14 +274,18 @@ Odoo is a trademark of `Odoo S.A. <https://www.odoo.com/>`__ (formerly OpenERP)
 ----------------
 
 
-|en| **zeroincombenze®** is a trademark of `SHS-AV s.r.l. <https://www.shs-av.com/>`__
-which distributes and promotes ready-to-use **Odoo** on own cloud infrastructure.
-`Zeroincombenze® distribution of Odoo <https://wiki.zeroincombenze.org/en/Odoo>`__
-is mainly designed to cover Italian law and markeplace.
+|en| **Odoo Italia Associazione**, or the `Associazione Odoo Italia <https://www.odoo-italia.org/>`__ is the nonprofit Italian Community Association born in 2011, whose mission is promote use of Odoo to cover Italian law and markeplace.
+Since 2017 Odoo Italia Associazione issues modules for Italian localization developed by OCA and others not released under `Odoo Proprietary License <https://www.odoo.com/documentation/user/9.0/legal/licenses/licenses.html>`__
 
-|it| **zeroincombenze®** è un marchio registrato di `SHS-AV s.r.l. <https://www.shs-av.com/>`__
-che distribuisce e promuove **Odoo** pronto all'uso sullla propria infrastuttura.
-La distribuzione `Zeroincombenze® è progettata per le esigenze del mercato italiano.
+Odoo Italia Associazione distributes code under `AGPL <https://www.gnu.org/licenses/agpl-3.0.html>`__ or `LGPL <https://www.gnu.org/licenses/lgpl.html>`__ free licenses.
+
+Read carefully published README for more info about authors.
+
+|it| `Odoo Italia Associazione <https://www.odoo-italia.org/>`__ è un'Associazione senza fine di lucro, nata nel 2011 che dal 2017 rilascia moduli per la localizzazione italiana sviluppati da OCA o da terze parti che non siano rilasciati con `Odoo Proprietary License <https://www.odoo.com/documentation/user/9.0/legal/licenses/licenses.html>`__
+
+Odoo Italia Associazione distribuisce il codice esclusivamente con licenze `AGPL <https://www.gnu.org/licenses/agpl-3.0.html>`__ o `LGPL <https://www.gnu.org/licenses/lgpl.html>`__
+
+Leggere con attenzione i file README per maggiori informazioni sugli autori.
 
 
 |chat_with_us|
@@ -291,13 +293,13 @@ La distribuzione `Zeroincombenze® è progettata per le esigenze del mercato ita
 
 |
 
-Last Update / Ultimo aggiornamento: 2018-12-03
+Last Update / Ultimo aggiornamento: 2018-12-09
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alfa
-.. |Build Status| image:: https://travis-ci.org/zeroincombenze/l10n-italy.svg?branch=10.0
-    :target: https://travis-ci.org/zeroincombenze/l10n-italy
+.. |Build Status| image:: https://travis-ci.org/Odoo-Italia-Associazione/l10n-italy.svg?branch=10.0
+    :target: https://travis-ci.org/Odoo-Italia-Associazione/l10n-italy
     :alt: github.com
 .. |license gpl| image:: https://img.shields.io/badge/licence-LGPL--3-7379c3.svg
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
@@ -305,10 +307,10 @@ Last Update / Ultimo aggiornamento: 2018-12-03
 .. |license opl| image:: https://img.shields.io/badge/licence-OPL-7379c3.svg
     :target: https://www.odoo.com/documentation/user/9.0/legal/licenses/licenses.html
     :alt: License: OPL
-.. |Coverage Status| image:: https://coveralls.io/repos/github/zeroincombenze/l10n-italy/badge.svg?branch=10.0
-    :target: https://coveralls.io/github/zeroincombenze/l10n-italy?branch=10.0
+.. |Coverage Status| image:: https://coveralls.io/repos/github/Odoo-Italia-Associazione/l10n-italy/badge.svg?branch=10.0
+    :target: https://coveralls.io/github/Odoo-Italia-Associazione/l10n-italy?branch=10.0
     :alt: Coverage
-.. |Codecov Status| image:: https://codecov.io/gh/zeroincombenze/l10n-italy/branch/10.0/graph/badge.svg
+.. |Codecov Status| image:: https://codecov.io/gh/Odoo-Italia-Associazione/l10n-italy/branch/10.0/graph/badge.svg
     :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
     :alt: Codecov
 .. |OCA project| image:: Unknown badge-OCA
@@ -321,7 +323,7 @@ Last Update / Ultimo aggiornamento: 2018-12-03
     :target: https://wiki.zeroincombenze.org/it/Odoo/10.0/man
     :alt: Technical Documentation
 .. |Try Me| image:: https://www.zeroincombenze.it/wp-content/uploads/ci-ct/prd/button-try-it-10.svg
-    :target: https://erp10.zeroincombenze.it
+    :target: https://odoo10.odoo-italia.org
     :alt: Try Me
 .. |OCA Codecov Status| image:: https://codecov.io/gh/OCA/l10n-italy/branch/10.0/graph/badge.svg
     :target: https://codecov.io/gh/OCA/l10n-italy/branch/10.0
@@ -353,4 +355,4 @@ Last Update / Ultimo aggiornamento: 2018-12-03
 .. |FatturaPA| image:: https://raw.githubusercontent.com/zeroincombenze/grymb/master/certificates/ade/icons/fatturapa.png
    :target: https://github.com/zeroincombenze/grymb/blob/master/certificates/ade/scope/fatturapa.md
 .. |chat_with_us| image:: https://www.shs-av.com/wp-content/chat_with_us.gif
-   :target: https://tawk.to/85d4f6e06e68dd4e358797643fe5ee67540e408b
+   :target: https://gitter.im/odoo_italia/development

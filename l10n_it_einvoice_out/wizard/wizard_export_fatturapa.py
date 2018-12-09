@@ -542,7 +542,7 @@ class WizardExportFatturapa(models.TransientModel):
                 )
                 DettaglioLinea.ScontoMaggiorazione.append(ScontoMaggiorazione)
             if aliquota == 0.0:
-                if not line.invoice_line_tax_ids[0].kind_id:
+                if not line.invoice_line_tax_ids[0].nature_id:
                     raise UserError(
                         _("No 'nature' field for tax %s") %
                         line.invoice_line_tax_ids[0].name)
