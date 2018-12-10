@@ -220,7 +220,7 @@ Leggere con attenzione i file README per maggiori informazioni sugli autori.
 
 |
 
-Last Update / Ultimo aggiornamento: 2018-12-09
+Last Update / Ultimo aggiornamento: 2018-12-10
 
 .. |Maturity| image:: https://img.shields.io/badge/maturity-Alfa-red.png
     :target: https://odoo-community.org/page/development-status
